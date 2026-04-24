@@ -1,0 +1,160 @@
+// PokeChess API — minimal data model.
+//
+// Scope (explicitly constrained):
+//   - User:         account + currencies + level/exp
+//   - Creature:     catalog of monsters (seeded, read-only from the API)
+//   - UserCreature: inventory row per (user, creature) with level/progress
+//   - TeamSlot:     6 rows per user (Prima Linea)
+//   - Config:       support / trainer / background currently selected
+//
+// Out of scope (do NOT add without explicit approval):
+//   events, economy complexity, async matches, admin features, moves table,
+//   support/trainer/background tables. Those stay as string IDs pointing to
+//   the client-side catalogs.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+
+enum CreatureType {
+  fire
+  water
+  grass
+  electric
+  poison
+  dark
+  ghost
+  dragon
+  light
+}
+
+enum CreatureRarity {
+  common
+  rare
+  epic
+  legendary
+}
+
+enum SpriteType {
+  image
+  spritesheet
+}
+
+// ---------------------------------------------------------------------------
+// Models
+// ---------------------------------------------------------------------------
+
+/// End-user account. `passwordHash` is bcrypt; never returned by the API.
+model User {
+  id           String @id @default(cuid())
+  email        String @unique
+  username     String @unique
+  passwordHash String
+
+  // Profile / progression shown in the header and Home stats.
+  level     Int @default(1)
+  exp       Int @default(0)
+  expToNext Int @default(1200)
+
+  // Wallet.
+  gold Int @default(0)
+  gems Int @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  creatures UserCreature[]
+  teamSlots TeamSlot[]
+  config    Config?
+
+  @@index([email])
+  @@index([username])
+}
+
+/// Catalog entry for a monster. Seeded at bootstrap and kept stable.
+/// `slug` is the client-facing stable id (e.g. "flarepup").
+model Creature {
+  id     String @id @default(cuid())
+  slug   String @unique
+  name   String
+  type   CreatureType
+  rarity CreatureRarity
+
+  /// Registry key consumed by the client asset system (SpriteRef.key).
+  spriteKey     String
+  spriteType    SpriteType @default(spritesheet)
+  spriteFrame   Int?
+  fallbackColor String?
+  fallbackLabel String?
+
+  /// Default progress cap for a freshly acquired UserCreature.
+  defaultProgressMax Int @default(50)
+
+  createdAt DateTime @default(now())
+
+  userCreatures UserCreature[]
+  teamSlots     TeamSlot[]
+
+  @@index([type])
+  @@index([rarity])
+}
+
+/// A user's owned instance of a creature.
+/// Level and progress live HERE, not on `Creature`.
+model UserCreature {
+  id              String  @id @default(cuid())
+  userId          String
+  creatureId      String
+  level           Int     @default(1)
+  exp             Int     @default(0)
+  progressCurrent Int     @default(0)
+  progressMax     Int     @default(50)
+  owned           Boolean @default(true)
+
+  acquiredAt DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  creature Creature @relation(fields: [creatureId], references: [id])
+
+  @@unique([userId, creatureId])
+  @@index([userId])
+}
+
+/// One of the six "Prima Linea" slots for a user.
+/// `moveId` is a string referencing the client catalog of MovePatterns
+/// ("horizontal", "vertical", "diagonal", "l-shape", "jump", "projection").
+model TeamSlot {
+  id         String @id @default(cuid())
+  userId     String
+  slotIndex  Int
+  creatureId String
+  moveId     String
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  creature Creature @relation(fields: [creatureId], references: [id])
+
+  @@unique([userId, slotIndex])
+  @@index([userId])
+}
+
+/// Per-user "Configurazione" selection (the 3 cards on the Board screen).
+/// IDs are strings pointing at client-side catalogs — no dedicated tables.
+model Config {
+  userId       String   @id
+  supportId    String?
+  trainerId    String?
+  backgroundId String?
+  updatedAt    DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pokechess-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "PokeChess monorepo — Player Game App (mobile-first), Admin Backoffice (scaffold) e backend API (Express + Prisma + PostgreSQL).",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "//player": "----- Player (mobile game) --------------------------------",
+    "dev:player": "npm run dev --workspace @pokechess/player",
+    "build:player": "npm run build --workspace @pokechess/player",
+    "preview:player": "npm run preview --workspace @pokechess/player",
+
+    "//admin": "----- Admin (backoffice scaffold) --------------------------",
+    "dev:admin": "npm run dev --workspace @pokechess/admin",
+    "build:admin": "npm run build --workspace @pokechess/admin",
+    "preview:admin": "npm run preview --workspace @pokechess/admin",
+
+    "//api": "----- API (backend) ----------------------------------------",
+    "dev:api": "npm run dev --workspace @pokechess/api",
+    "build:api": "npm run build --workspace @pokechess/api",
+    "start:api": "npm run start --workspace @pokechess/api",
+
+    "//db": "----- Database (delegate to @pokechess/api) ------------------",
+    "db:generate": "npm run db:generate --workspace @pokechess/api",
+    "db:migrate": "npm run db:migrate --workspace @pokechess/api",
+    "db:deploy": "npm run db:deploy --workspace @pokechess/api",
+    "db:seed": "npm run db:seed --workspace @pokechess/api",
+    "db:reset": "npm run db:reset --workspace @pokechess/api",
+    "db:studio": "npm run db:studio --workspace @pokechess/api",
+
+    "//all": "----- Aggregate workspace commands --------------------------",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}
