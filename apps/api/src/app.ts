@@ -10,6 +10,7 @@ import { teamRouter } from './team/team.router';
 import { boardConfigRouter } from './board-config/board-config.router';
 import { bootstrapRouter } from './app-bootstrap/bootstrap.router';
 import { devRouter } from './dev/dev.router';
+import { adminRouter } from './admin/admin.router';
 
 export function createApp(): Express {
   const app = express();
@@ -42,6 +43,7 @@ export function createApp(): Express {
   app.use('/team', teamRouter);
   app.use('/board-config', boardConfigRouter);
   app.use('/app', bootstrapRouter);
+  app.use('/admin', adminRouter);
 
   // Dev-only helpers: mounted strictly outside production so the surface
   // cannot be reached on real deployments. In production NODE_ENV must be

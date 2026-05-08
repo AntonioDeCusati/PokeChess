@@ -7,25 +7,36 @@ import {
   type UserCreatureDto,
 } from './creature.dto';
 
+/** Include clause shared by every catalog query. */
+const withAnimations = { animations: true } as const;
+
 export async function listCreatures(): Promise<CreatureDto[]> {
   const creatures = await prisma.creature.findMany({
-    orderBy: { createdAt: 'asc' },
+    orderBy: { pokedexNumber: 'asc' },
+    include: withAnimations,
   });
   return creatures.map(toCreatureDto);
 }
 
 /**
- * Look up a single catalog entry by either its internal id or its stable
- * slug. Slugs are client-facing (`flarepup`, `voidbat`, …) while ids are
- * Prisma cuids. The param is passed as-is — we try both shapes.
+ * Look up a single catalog entry by its internal cuid, slug, or pokedex
+ * number. Slugs are client-facing stable ids ("flarepup", "voidbat", …).
  */
 export async function getCreatureByIdOrSlug(
-  idOrSlug: string,
+  idSlugOrNumber: string,
 ): Promise<CreatureDto> {
+  const asNumber = Number(idSlugOrNumber);
   const creature = await prisma.creature.findFirst({
     where: {
-      OR: [{ id: idOrSlug }, { slug: idOrSlug }],
+      OR: [
+        { id: idSlugOrNumber },
+        { slug: idSlugOrNumber },
+        ...(Number.isInteger(asNumber) && !Number.isNaN(asNumber)
+          ? [{ pokedexNumber: asNumber }]
+          : []),
+      ],
     },
+    include: withAnimations,
   });
   if (!creature) throw HttpError.notFound('Creature not found');
   return toCreatureDto(creature);
@@ -33,14 +44,17 @@ export async function getCreatureByIdOrSlug(
 
 /**
  * Return the full catalog merged with the user's ownership state.
- * Unowned entries are returned with owned=false/level=0/progress=0 so the
+ * Unowned entries are returned with owned=false/level=0/currentExp=0 so the
  * client can render a stable grid (Collezione in the mockups).
  */
 export async function listCatalogWithOwnership(
   userId: string,
 ): Promise<UserCreatureDto[]> {
   const [creatures, userCreatures] = await Promise.all([
-    prisma.creature.findMany({ orderBy: { createdAt: 'asc' } }),
+    prisma.creature.findMany({
+      orderBy: { pokedexNumber: 'asc' },
+      include: withAnimations,
+    }),
     prisma.userCreature.findMany({ where: { userId } }),
   ]);
   const byCreatureId = new Map(userCreatures.map((uc) => [uc.creatureId, uc]));
@@ -56,7 +70,9 @@ export async function listUserInventory(
   const rows = await prisma.userCreature.findMany({
     where: { userId, owned: true },
     orderBy: { acquiredAt: 'asc' },
-    include: { creature: true },
+    include: { creature: { include: withAnimations } },
   });
   return rows.map((r) => toUserCreatureDto(r.creature, r));
 }
+
+

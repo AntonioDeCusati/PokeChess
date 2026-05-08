@@ -3,9 +3,12 @@ import {
   Navigate,
   RouterProvider,
 } from 'react-router-dom';
+import { AuthProvider } from '@/lib/auth';
 import { AppShell } from '@/layout';
 import {
+  BattlePage,
   BoardPage,
+  ChessTestPage,
   FriendsPage,
   HomePage,
   LeaguePage,
@@ -19,9 +22,17 @@ import { routePaths } from '@/lib/routes';
  * AppShell is a layout route, so the header + bottom nav stay mounted
  * across page transitions (no re-render flicker).
  *
- * Default route redirects "/" → "/home".
+ * /battle is rendered OUTSIDE AppShell (fullscreen, no header/footer).
  */
 const router = createBrowserRouter([
+  {
+    path: '/battle',
+    element: <BattlePage />,
+  },
+  {
+    path: '/chess-test',
+    element: <ChessTestPage />,
+  },
   {
     element: <AppShell />,
     children: [
@@ -37,5 +48,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 }

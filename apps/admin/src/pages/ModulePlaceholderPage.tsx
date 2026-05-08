@@ -1,19 +1,9 @@
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { adminModules } from '@/lib/modules';
 
-/**
- * Placeholder renderizzato dalle rotte /<slug> finché non implementiamo
- * la pagina reale del modulo (tabella + form + CRUD).
- *
- * Pattern target per ogni modulo (quando verrà implementato):
- *   - header: titolo + "Nuovo" CTA
- *   - filtri (tipo, rarità, stato)
- *   - tabella paginata + search
- *   - drawer/modale per create/edit con form validato
- *   - preview sprite dove rilevante
- */
 export function ModulePlaceholderPage() {
-  const { slug } = useParams<{ slug: string }>();
+  const { pathname } = useLocation();
+  const slug = pathname.replace(/^\//, '');
   const module = adminModules.find((m) => m.slug === slug);
 
   return (
@@ -33,9 +23,7 @@ export function ModulePlaceholderPage() {
         </p>
         <p className="mt-1 text-xs text-text-secondary">
           Questa pagina ospiterà la gestione CRUD di{' '}
-          <strong>{module?.label.toLowerCase() ?? slug}</strong>.<br />
-          Vedi <code className="rounded bg-surface-muted px-1 py-0.5 font-mono text-[11px]">apps/admin/README.md</code>{' '}
-          per la roadmap.
+          <strong>{module?.label.toLowerCase() ?? slug}</strong>.
         </p>
       </div>
     </div>

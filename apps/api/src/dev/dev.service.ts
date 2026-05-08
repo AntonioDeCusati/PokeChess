@@ -24,11 +24,7 @@ export async function grantCreatures(
 
   const targets = await prisma.creature.findMany({
     where: body.slugs ? { slug: { in: body.slugs } } : undefined,
-    select: {
-      id: true,
-      slug: true,
-      defaultProgressMax: true,
-    },
+    select: { id: true, slug: true },
   });
 
   if (body.slugs) {
@@ -46,7 +42,7 @@ export async function grantCreatures(
   }
 
   const level = body.level ?? 1;
-  const progressCurrent = body.progressCurrent ?? 0;
+  const currentExp = body.currentExp ?? 0;
 
   await prisma.$transaction(
     targets.map((creature) =>
@@ -58,14 +54,13 @@ export async function grantCreatures(
           userId,
           creatureId: creature.id,
           level,
-          progressCurrent,
-          progressMax: creature.defaultProgressMax,
+          currentExp,
           owned: true,
         },
         update: {
           owned: true,
           level,
-          progressCurrent,
+          currentExp,
         },
       }),
     ),
@@ -77,3 +72,5 @@ export async function grantCreatures(
     total: targets.length,
   };
 }
+
+

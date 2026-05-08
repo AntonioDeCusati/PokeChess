@@ -14,3 +14,4 @@ export * from './league';
 export * from './friends';
 export * from './home';
 export * from './navigation';
+export * from './battle';

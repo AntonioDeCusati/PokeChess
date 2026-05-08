@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import {
   BattleButton,
   DailyRewardsSection,
@@ -20,11 +21,13 @@ import { seasonProgress, victoryChest } from '@/data';
  *   6. Statistics     — Trofei + Vittorie
  */
 export function HomePage() {
+  const nav = useNavigate();
+
   return (
     <div className="flex flex-col gap-3 px-3 py-3">
       <SeasonBanner season={seasonProgress} />
       <HeroScene />
-      <BattleButton />
+      <BattleButton onClick={() => nav('/battle')} />
       <VictoryChestCard chest={victoryChest} />
       <DailyRewardsSection />
       <StatisticsSection />

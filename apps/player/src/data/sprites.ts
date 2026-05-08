@@ -32,6 +32,23 @@ export const creatureSprite = (
   fallbackLabel: label,
 });
 
+/**
+ * Build a placeholder SpriteRef from a creature's catalog data.
+ * Uses `pokedexPath` as the asset key so the registry can be populated
+ * per-creature later (one spritesheet per PMD folder).
+ */
+export const creatureSpriteFromPath = (
+  pokedexPath: string,
+  type: CreatureType,
+  name: string,
+): SpriteRef => ({
+  key: `creature/${pokedexPath}`,
+  type: 'spritesheet',
+  frame: 0,
+  fallbackColor: typeColor[type],
+  fallbackLabel: name.slice(0, 2).toUpperCase(),
+});
+
 /** Trainer portrait (single image). */
 export const trainerSprite = (slug: string, label?: string): SpriteRef => ({
   key: `trainers/${slug}`,

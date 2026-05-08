@@ -1,14 +1,13 @@
-import { Sprite } from '@/components/Sprite';
 import { ProgressBar } from '@/components/ProgressBar';
-import type { Creature } from '@/types';
+import { CreaturePortrait } from '@/components/CreaturePortrait';
+import type { CreatureType, UserCreature } from '@/types';
 
 export interface CreatureCardProps {
-  creature: Creature;
-  onClick?: (creature: Creature) => void;
+  creature: UserCreature;
+  onClick?: (creature: UserCreature) => void;
 }
 
-/** Maps the creature type to a soft tint + progress-bar color. */
-const typeTint: Record<Creature['type'], { glow: string; bar: string }> = {
+const typeTint: Record<CreatureType, { glow: string; bar: string }> = {
   fire:     { glow: '#E85C3A', bar: '#E85C3A' },
   water:    { glow: '#4FA8E0', bar: '#4FA8E0' },
   grass:    { glow: '#5BBF4A', bar: '#5BBF4A' },
@@ -31,8 +30,7 @@ const typeTint: Record<Creature['type'], { glow: string; bar: string }> = {
  * Locked/unowned creatures are rendered dimmed.
  */
 export function CreatureCard({ creature, onClick }: CreatureCardProps) {
-  const tint = typeTint[creature.type];
-  const owned = creature.owned;
+  const tint = typeTint[creature.type1];
 
   return (
     <button
@@ -42,7 +40,7 @@ export function CreatureCard({ creature, onClick }: CreatureCardProps) {
       className={[
         'group relative flex flex-col gap-1 rounded-card border border-border-subtle bg-bg-elevated p-1.5',
         'text-left transition-colors hover:border-border-strong',
-        owned ? '' : 'opacity-60',
+        creature.owned ? '' : 'opacity-60',
       ].join(' ')}
     >
       <div
@@ -52,11 +50,10 @@ export function CreatureCard({ creature, onClick }: CreatureCardProps) {
           backgroundColor: '#11141A',
         }}
       >
-        <Sprite
-          sprite={creature.sprite}
-          width="80%"
-          height="80%"
-          alt={creature.name}
+        <CreaturePortrait
+          pokedexPath={creature.pokedexPath}
+          name={creature.name}
+          size="80%"
         />
       </div>
 
@@ -67,13 +64,13 @@ export function CreatureCard({ creature, onClick }: CreatureCardProps) {
       </div>
 
       <ProgressBar
-        current={creature.progressCurrent}
-        max={creature.progressMax}
+        current={creature.currentExp}
+        max={creature.expMax}
         color={tint.bar}
         height={4}
         className="px-0.5"
         showLabel
-        label={`${creature.progressCurrent}/${creature.progressMax}`}
+        label={`${creature.currentExp}/${creature.expMax}`}
       />
     </button>
   );

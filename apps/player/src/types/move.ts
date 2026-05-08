@@ -11,7 +11,10 @@ export type MovePattern =
   | 'diagonal'
   | 'l-shape'
   | 'jump'
-  | 'projection';
+  | 'projection'
+  | 'pawn'
+  | 'king'
+  | 'rook';
 
 export interface Move {
   id: MoveId;

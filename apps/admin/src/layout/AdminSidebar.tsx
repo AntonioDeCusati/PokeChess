@@ -52,11 +52,16 @@ export function AdminSidebar() {
                           'flex h-8 items-center rounded-control px-3 text-sm transition-colors',
                           isActive
                             ? 'bg-brand text-white'
-                            : 'text-surface-sidebarText hover:bg-white/5 hover:text-white',
+                            : m.implemented
+                              ? 'text-surface-sidebarText hover:bg-white/5 hover:text-white'
+                              : 'text-surface-sidebarText/50 hover:bg-white/5',
                         ].join(' ')
                       }
                     >
                       {m.label}
+                      {m.implemented && !false && (
+                        <span className="ml-auto h-1.5 w-1.5 rounded-full bg-status-success" />
+                      )}
                     </NavLink>
                   </li>
                 ))}

@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Section } from '@/components/Section';
-import { creatures as allCreatures } from '@/data';
-import type { Creature } from '@/types';
+import type { UserCreature } from '@/types';
 import { CreatureCard } from './CreatureCard';
 import {
   CollezioneFilter,
@@ -9,18 +8,13 @@ import {
 } from './CollezioneFilter';
 
 export interface CollezioneSectionProps {
-  creatures?: readonly Creature[];
-  /** Optional grid density override; default matches the mockup (5 cols). */
+  creatures: readonly UserCreature[];
   columns?: 3 | 4 | 5;
-  onSelectCreature?: (creature: Creature) => void;
+  onSelectCreature?: (creature: UserCreature) => void;
 }
 
-/**
- * "COLLEZIONE" — filterable creature grid.
- * Default layout mirrors the mockup: 5 columns, 3 rows visible.
- */
 export function CollezioneSection({
-  creatures = allCreatures,
+  creatures,
   columns = 5,
   onSelectCreature,
 }: CollezioneSectionProps) {
@@ -30,7 +24,7 @@ export function CollezioneSection({
     () =>
       filter === 'all'
         ? creatures
-        : creatures.filter((c) => c.type === filter),
+        : creatures.filter((c) => c.type1 === filter),
     [creatures, filter],
   );
 

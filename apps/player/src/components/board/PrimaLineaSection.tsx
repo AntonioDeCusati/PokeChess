@@ -1,34 +1,33 @@
 import { Section } from '@/components/Section';
-import { creaturesById, movesById, team } from '@/data';
-import type { Team, TeamSlot } from '@/types';
+import { movesById } from '@/data';
+import type { UserCreature, TeamSlot } from '@/types';
 import { TeamSlotCard } from './TeamSlotCard';
 
 export interface PrimaLineaSectionProps {
-  teamData?: Team;
-  onChangeSlot?: (slotIndex: TeamSlot['index']) => void;
+  creatures: UserCreature[];
+  teamSlots: TeamSlot[] | null;
+  onChangeSlot?: (slotIndex: number) => void;
 }
 
-/**
- * "PRIMA LINEA (6/6)" — the player's main 6-slot team.
- * The row scrolls horizontally to stay compact on narrow screens.
- */
 export function PrimaLineaSection({
-  teamData = team,
+  creatures,
+  teamSlots,
   onChangeSlot,
 }: PrimaLineaSectionProps) {
-  const filled = teamData.slots.filter(
-    (s) => creaturesById[s.creatureId],
-  ).length;
+  const creatureMap = new Map(creatures.map((c) => [c.id, c]));
+  const slots = teamSlots ?? [];
+  const filled = slots.length;
+
+  const emptySlots = Array.from({ length: Math.max(0, 6 - slots.length) }, (_, i) => i + slots.length + 1);
 
   return (
     <Section
-      title={`PRIMA LINEA (${filled}/${teamData.slots.length})`}
+      title={`PRIMA LINEA (${filled}/6)`}
       subtitle="La tua squadra principale"
     >
-      {/* 3 colonne × 2 righe — tutte le 6 card visibili senza scroll. */}
       <ul className="grid grid-cols-3 gap-2">
-        {teamData.slots.map((slot) => {
-          const creature = creaturesById[slot.creatureId];
+        {slots.map((slot) => {
+          const creature = creatureMap.get(slot.creatureId);
           const move = movesById[slot.moveId];
           if (!creature || !move) return null;
           return (
@@ -42,6 +41,17 @@ export function PrimaLineaSection({
             </li>
           );
         })}
+        {emptySlots.map((idx) => (
+          <li key={`empty-${idx}`} className="min-w-0">
+            <button
+              type="button"
+              onClick={() => onChangeSlot?.(idx)}
+              className="flex w-full aspect-square items-center justify-center rounded-card border-2 border-dashed border-border-subtle bg-bg-elevated/50 text-text-secondary hover:border-accent transition-colors"
+            >
+              <span className="text-2xl">+</span>
+            </button>
+          </li>
+        ))}
       </ul>
     </Section>
   );

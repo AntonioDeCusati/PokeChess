@@ -8,13 +8,15 @@
  */
 
 export interface AdminModule {
-  slug: string;              // URL segment (/admin/<slug>)
-  label: string;             // Sidebar label
-  description: string;       // Short help text for the dashboard card
+  slug: string;
+  label: string;
+  description: string;
   group: ModuleGroup;
+  implemented?: boolean;
 }
 
 export type ModuleGroup =
+  | 'users'        // gestione utenti
   | 'content'      // entità di contenuto del gioco
   | 'economy'      // bauli, ricompense, pacchi
   | 'progression'  // regole di sblocco, ranking, stagioni
@@ -22,13 +24,17 @@ export type ModuleGroup =
   | 'assets';      // upload / binding di sprite e immagini
 
 export const adminModules: readonly AdminModule[] = [
+  // Users ------------------------------------------------------------------
+  { slug: 'users',           label: 'Utenti',          description: 'Gestione utenti registrati: profilo, livello, valute, creature.',  group: 'users', implemented: true },
+
   // Content ----------------------------------------------------------------
-  { slug: 'creatures',       label: 'Creature',        description: 'Anagrafica creature: tipo, rarità, statistiche, sprite.', group: 'content' },
-  { slug: 'trainers',        label: 'Trainer',         description: 'Avatar allenatori selezionabili dai giocatori.',          group: 'content' },
-  { slug: 'backgrounds',     label: 'Sfondi',          description: 'Sfondi di battaglia (Board background).',                 group: 'content' },
-  { slug: 'moves',           label: 'Mosse',           description: 'Mosse standard (orizzontale, verticale, …).',             group: 'content' },
-  { slug: 'special-moves',   label: 'Mosse Speciali',  description: 'Abilità speciali con cooldown / cost.',                   group: 'content' },
-  { slug: 'abilities',       label: 'Abilità',         description: 'Tratti passivi delle creature.',                          group: 'content' },
+  { slug: 'creatures',       label: 'Creature',        description: 'Anagrafica creature: tipo, rarità, statistiche, sprite.',     group: 'content', implemented: true },
+  { slug: 'trainers',        label: 'Trainer',         description: 'Avatar allenatori selezionabili dai giocatori.',              group: 'content', implemented: true },
+  { slug: 'backgrounds',     label: 'Sfondi',          description: 'Sfondi di battaglia (Board background).',                     group: 'content', implemented: true },
+  { slug: 'supports',        label: 'Supporti',        description: 'Unità di supporto selezionabili nella configurazione.',       group: 'content', implemented: true },
+  { slug: 'moves',           label: 'Mosse',           description: 'Mosse standard (orizzontale, verticale, …).',                 group: 'content' },
+  { slug: 'special-moves',   label: 'Mosse Speciali',  description: 'Abilità speciali con cooldown / cost.',                       group: 'content' },
+  { slug: 'abilities',       label: 'Abilità',         description: 'Tratti passivi delle creature.',                              group: 'content' },
 
   // Economy ----------------------------------------------------------------
   { slug: 'chests',          label: 'Bauli',           description: 'Tier bauli, drop table, costi.',                          group: 'economy' },
@@ -48,6 +54,7 @@ export const adminModules: readonly AdminModule[] = [
 ];
 
 export const moduleGroups: Record<ModuleGroup, { label: string }> = {
+  users:       { label: 'Utenti' },
   content:     { label: 'Contenuti' },
   economy:     { label: 'Economia' },
   progression: { label: 'Progressione' },

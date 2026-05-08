@@ -1,4 +1,46 @@
-import type { Creature, UserCreature } from '@prisma/client';
+import type {
+  AnimationType,
+  Creature,
+  CreatureAnimation,
+  UserCreature,
+} from '@prisma/client';
+
+// ---------------------------------------------------------------------------
+// Animation
+// ---------------------------------------------------------------------------
+
+export interface AnimationDto {
+  type: AnimationType;
+  frameWidth: number;
+  frameHeight: number;
+  /** Total number of frames (= durations.length). */
+  frameCount: number;
+  /** Per-frame durations in game ticks (60 fps). */
+  durations: number[];
+  /** Frame index where the rush/charge starts (attack only). */
+  rushFrame?: number;
+  /** Frame index of impact (attack only). */
+  hitFrame?: number;
+  /** Frame index where the creature starts returning (attack only). */
+  returnFrame?: number;
+}
+
+function toAnimationDto(a: CreatureAnimation): AnimationDto {
+  return {
+    type: a.type,
+    frameWidth: a.frameWidth,
+    frameHeight: a.frameHeight,
+    frameCount: a.frameCount,
+    durations: a.durations as number[],
+    ...(a.rushFrame   !== null ? { rushFrame:   a.rushFrame   } : {}),
+    ...(a.hitFrame    !== null ? { hitFrame:    a.hitFrame    } : {}),
+    ...(a.returnFrame !== null ? { returnFrame: a.returnFrame } : {}),
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Creature (catalog)
+// ---------------------------------------------------------------------------
 
 /**
  * Catalog-only creature. Pure metadata — no per-user state.
@@ -10,76 +52,74 @@ import type { Creature, UserCreature } from '@prisma/client';
 export interface CreatureDto {
   id: string;
   slug: string;
+  pokedexNumber: number;
+  /** Relative path under apps/assets/sprite/ (e.g. "0006" or "0006/0005"). */
+  pokedexPath: string;
   name: string;
-  type: string;
+  type1: string;
+  type2?: string;
   rarity: string;
-  sprite: SpriteRefDto;
-  defaultProgressMax: number;
+  /** Base exp cap for level-up (game logic may scale per level). */
+  expMax: number;
+  canEvolve: boolean;
+  /** ID of the creature this one evolves into (only present when canEvolve=true). */
+  evolveToId?: string;
+  /** Sprite animation data for this creature (idle / walk / attack / hurt). */
+  animations: AnimationDto[];
 }
 
+type CreatureWithAnimations = Creature & { animations: CreatureAnimation[] };
+
+export function toCreatureDto(c: CreatureWithAnimations): CreatureDto {
+  return {
+    id: c.id,
+    slug: c.slug,
+    pokedexNumber: c.pokedexNumber,
+    pokedexPath: c.pokedexPath,
+    name: c.name,
+    type1: c.type1,
+    ...(c.type2        ? { type2:       c.type2       } : {}),
+    rarity: c.rarity,
+    expMax: c.expMax,
+    canEvolve: c.canEvolve,
+    ...(c.evolveToId  ? { evolveToId: c.evolveToId } : {}),
+    animations: c.animations.map(toAnimationDto),
+  };
+}
+
+// ---------------------------------------------------------------------------
+// UserCreature (catalog + per-user state)
+// ---------------------------------------------------------------------------
+
 /**
- * Catalog metadata + per-user ownership overlay.
+ * Catalog metadata merged with per-user ownership state.
  *
  * Consumed by:
  *   - GET /user/creatures       (only rows the user actually owns)
  *   - GET /app/bootstrap        (ALL catalog creatures; unowned ones have
- *                                owned=false, level=0, progress=0)
+ *                                owned=false, level=0, currentExp=0)
  */
 export interface UserCreatureDto extends CreatureDto {
   level: number;
-  progressCurrent: number;
-  progressMax: number;
+  currentExp: number;
   owned: boolean;
-}
-
-/**
- * Asset reference shape consumed by the client asset registry.
- * Matches `apps/player/src/types/common.ts::SpriteRef`.
- */
-export interface SpriteRefDto {
-  key: string;
-  type: 'image' | 'spritesheet';
-  frame?: number;
-  fallbackColor?: string;
-  fallbackLabel?: string;
-}
-
-function toSpriteRef(c: Creature): SpriteRefDto {
-  return {
-    key: c.spriteKey,
-    type: c.spriteType,
-    ...(c.spriteFrame !== null ? { frame: c.spriteFrame } : {}),
-    ...(c.fallbackColor ? { fallbackColor: c.fallbackColor } : {}),
-    ...(c.fallbackLabel ? { fallbackLabel: c.fallbackLabel } : {}),
-  };
-}
-
-export function toCreatureDto(c: Creature): CreatureDto {
-  return {
-    id: c.id,
-    slug: c.slug,
-    name: c.name,
-    type: c.type,
-    rarity: c.rarity,
-    sprite: toSpriteRef(c),
-    defaultProgressMax: c.defaultProgressMax,
-  };
 }
 
 /**
  * Merge a catalog creature with (optionally) the user's UserCreature row.
  * When the user does not own the creature, returns a stable unowned shape
- * (owned=false, level=0, progressCurrent=0, progressMax=default).
+ * (owned=false, level=0, currentExp=0).
  */
 export function toUserCreatureDto(
-  c: Creature,
+  c: CreatureWithAnimations,
   uc: UserCreature | null | undefined,
 ): UserCreatureDto {
   return {
     ...toCreatureDto(c),
-    level: uc?.level ?? 0,
-    progressCurrent: uc?.progressCurrent ?? 0,
-    progressMax: uc?.progressMax ?? c.defaultProgressMax,
-    owned: uc?.owned ?? false,
+    level:      uc?.level      ?? 0,
+    currentExp: uc?.currentExp ?? 0,
+    owned:      uc?.owned      ?? false,
   };
 }
+
+

@@ -10,7 +10,7 @@ export const RegisterBody = z.object({
       /^[a-zA-Z0-9_-]+$/,
       'username may only contain letters, digits, "_" and "-"',
     ),
-  password: z.string().min(8).max(128),
+  password: z.string().min(4).max(128),
 });
 export type RegisterBody = z.infer<typeof RegisterBody>;
 

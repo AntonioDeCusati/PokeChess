@@ -1,16 +1,15 @@
-// PokeChess API — minimal data model.
+// PokeChess API — data model.
 //
-// Scope (explicitly constrained):
-//   - User:         account + currencies + level/exp
-//   - Creature:     catalog of monsters (seeded, read-only from the API)
-//   - UserCreature: inventory row per (user, creature) with level/progress
-//   - TeamSlot:     6 rows per user (Prima Linea)
-//   - Config:       support / trainer / background currently selected
-//
-// Out of scope (do NOT add without explicit approval):
-//   events, economy complexity, async matches, admin features, moves table,
-//   support/trainer/background tables. Those stay as string IDs pointing to
-//   the client-side catalogs.
+// Scope:
+//   - User:              account + currencies + level/exp
+//   - Creature:          catalog of monsters
+//   - CreatureAnimation: per-animation frame data (idle/walk/attack/hurt)
+//   - UserCreature:      inventory row per (user, creature) with level/currentExp
+//   - TeamSlot:          6 rows per user (Prima Linea)
+//   - Trainer:           selectable trainer avatars
+//   - Support:           selectable support units
+//   - Background:        selectable battle backgrounds
+//   - Config:            support / trainer / background currently selected
 
 generator client {
   provider = "prisma-client-js"
@@ -44,9 +43,12 @@ enum CreatureRarity {
   legendary
 }
 
-enum SpriteType {
-  image
-  spritesheet
+/// The four animation clips loaded at runtime for every creature.
+enum AnimationType {
+  idle
+  walk
+  attack
+  hurt
 }
 
 // ---------------------------------------------------------------------------
@@ -80,45 +82,84 @@ model User {
   @@index([username])
 }
 
-/// Catalog entry for a monster. Seeded at bootstrap and kept stable.
+/// Catalog entry for a creature. Seeded at bootstrap and kept stable.
 /// `slug` is the client-facing stable id (e.g. "flarepup").
+/// `pokedexNumber` maps to the PMD sprite folder (e.g. 1 → sprite/0001/).
+/// `pokedexPath`   is the relative path under apps/assets/sprite/
+///                 (e.g. "0001" or "0003/0000/0001" for alternate forms).
 model Creature {
-  id     String @id @default(cuid())
-  slug   String @unique
-  name   String
-  type   CreatureType
+  id            String @id @default(cuid())
+  slug          String @unique
+  pokedexNumber Int    @unique
+  /// Relative path under apps/assets/sprite/ (4-digit or nested, e.g. "0006/0005").
+  pokedexPath   String @unique
+
+  name  String
+  type1 CreatureType
+  type2 CreatureType?
+
   rarity CreatureRarity
 
-  /// Registry key consumed by the client asset system (SpriteRef.key).
-  spriteKey     String
-  spriteType    SpriteType @default(spritesheet)
-  spriteFrame   Int?
-  fallbackColor String?
-  fallbackLabel String?
+  /// Base exp required to level up (game logic may apply per-level scaling).
+  expMax Int @default(100)
 
-  /// Default progress cap for a freshly acquired UserCreature.
-  defaultProgressMax Int @default(50)
+  canEvolve  Boolean @default(false)
+  /// ID of the Creature this one evolves into (null if canEvolve = false).
+  evolveToId String?
+
+  /// Reward points earned when this piece is captured in battle.
+  captureReward Int @default(0)
 
   createdAt DateTime @default(now())
 
+  animations    CreatureAnimation[]
   userCreatures UserCreature[]
   teamSlots     TeamSlot[]
 
-  @@index([type])
+  evolveTo    Creature?  @relation("Evolution", fields: [evolveToId], references: [id])
+  evolvedFrom Creature[] @relation("Evolution")
+
+  @@index([type1])
   @@index([rarity])
 }
 
+/// Per-animation spritesheet metadata for a creature.
+/// Derived from the AnimData.xml files in apps/assets/sprite/{pokedexPath}/.
+/// Stored in DB to avoid XML parsing at runtime.
+model CreatureAnimation {
+  id         String        @id @default(cuid())
+  creatureId String
+  type       AnimationType
+
+  frameWidth  Int
+  frameHeight Int
+  /// Total number of frames (derived from the <Durations> list length).
+  frameCount  Int
+  /// Per-frame durations in game ticks (60 fps), stored as a JSON int array.
+  durations   Json
+
+  /// Frame index where the rush/charge starts (attack animation only).
+  rushFrame   Int?
+  /// Frame index of impact (attack animation only).
+  hitFrame    Int?
+  /// Frame index where the creature starts returning (attack animation only).
+  returnFrame Int?
+
+  creature Creature @relation(fields: [creatureId], references: [id], onDelete: Cascade)
+
+  @@unique([creatureId, type])
+  @@index([creatureId])
+}
+
 /// A user's owned instance of a creature.
-/// Level and progress live HERE, not on `Creature`.
+/// Level and currentExp live HERE, not on `Creature`.
 model UserCreature {
-  id              String  @id @default(cuid())
-  userId          String
-  creatureId      String
-  level           Int     @default(1)
-  exp             Int     @default(0)
-  progressCurrent Int     @default(0)
-  progressMax     Int     @default(50)
-  owned           Boolean @default(true)
+  id         String  @id @default(cuid())
+  userId     String
+  creatureId String
+  level      Int     @default(1)
+  currentExp Int     @default(0)
+  owned      Boolean @default(true)
 
   acquiredAt DateTime @default(now())
   updatedAt  DateTime @updatedAt
@@ -147,8 +188,47 @@ model TeamSlot {
   @@index([userId])
 }
 
+/// Selectable trainer avatar. Managed via admin.
+model Trainer {
+  id       String  @id @default(cuid())
+  slug     String  @unique
+  name     String
+  imageUrl String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([slug])
+}
+
+/// Selectable support unit. Managed via admin.
+model Support {
+  id          String  @id @default(cuid())
+  slug        String  @unique
+  name        String
+  imageUrl    String?
+  description String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([slug])
+}
+
+/// Selectable battle background. Managed via admin.
+model Background {
+  id       String  @id @default(cuid())
+  slug     String  @unique
+  name     String
+  imageUrl String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([slug])
+}
+
 /// Per-user "Configurazione" selection (the 3 cards on the Board screen).
-/// IDs are strings pointing at client-side catalogs — no dedicated tables.
 model Config {
   userId       String   @id
   supportId    String?

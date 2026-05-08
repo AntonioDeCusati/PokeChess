@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "PokeChess Player Game App \u2014 mobile-first strategy game client (React + TypeScript + Tailwind). 95% dei giocatori \u00e8 su smartphone: ogni pagina deve essere ottimizzata per schermi verticali.",
+  "description": "PokeChess Player Game App — mobile-first strategy game client (React + TypeScript + Tailwind). 95% dei giocatori è su smartphone: ogni pagina deve essere ottimizzata per schermi verticali.",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -12,9 +12,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "phaser": "^4.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^6.28.0",
+    "stockfish": "^18.0.7"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
