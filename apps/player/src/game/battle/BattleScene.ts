@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import type { BattlePiece, BattleState } from '@/types/battle';
+import type { BattlePiece, BattleState, EnergyBank } from '@/types/battle';
 import { BOARD_ROWS, BOARD_COLS } from '@/types/battle';
 import { idleSpriteData } from '@/data/idle-sprite-data';
 import { getAvailableMoves } from './movement';
@@ -186,7 +186,7 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private handleCellTap(row: number, col: number) {
-    if (this.aiThinking || this.state.currentTurn !== 'player') return;
+    if (this.aiThinking || this.state.currentTurn !== 'player' || this.state.status !== 'playing') return;
 
     const piece = this.state.pieces.find((p) => p.row === row && p.col === col);
 
@@ -295,6 +295,15 @@ export class BattleScene extends Phaser.Scene {
     EventBus.emit('state-changed', this.state);
   }
 
+  private addReward(bank: EnergyBank, captured: BattlePiece): EnergyBank {
+    const updated = { ...bank };
+    updated[captured.type1] += captured.rewardType1;
+    if (captured.type2) {
+      updated[captured.type2] += captured.rewardType2;
+    }
+    return updated;
+  }
+
   private movePiece(piece: BattlePiece, toRow: number, toCol: number) {
     const target = this.state.pieces.find(
       (p) => p.row === toRow && p.col === toCol && p.owner !== piece.owner,
@@ -326,14 +335,35 @@ export class BattleScene extends Phaser.Scene {
       });
     }
 
-    const nextTurn = this.state.currentTurn === 'player' ? 'opponent' : 'player';
+    let playerEnergy = this.state.playerEnergy;
+    let opponentEnergy = this.state.opponentEnergy;
+    let status: BattleState['status'] = 'playing';
+
+    if (target) {
+      if (piece.owner === 'player') {
+        playerEnergy = this.addReward(playerEnergy, target);
+      } else {
+        opponentEnergy = this.addReward(opponentEnergy, target);
+      }
+
+      if (target.isTrainer) {
+        status = piece.owner === 'player' ? 'won' : 'lost';
+      }
+    }
+
+    const nextTurn = status !== 'playing'
+      ? this.state.currentTurn
+      : this.state.currentTurn === 'player' ? 'opponent' : 'player';
 
     this.state = {
       ...this.state,
       selectedPieceId: null,
       inspectedPieceId: null,
-      currentTurn: nextTurn as 'player' | 'opponent',
+      currentTurn: nextTurn,
       turnNumber: nextTurn === 'player' ? this.state.turnNumber + 1 : this.state.turnNumber,
+      playerEnergy,
+      opponentEnergy,
+      status,
       pieces: this.state.pieces
         .filter((p) => p.id !== target?.id)
         .map((p) =>
@@ -346,7 +376,9 @@ export class BattleScene extends Phaser.Scene {
     this.updateHighlights();
     EventBus.emit('state-changed', this.state);
 
-    if (this.state.currentTurn === 'opponent' && this.state.status === 'playing') {
+    if (status !== 'playing') return;
+
+    if (this.state.currentTurn === 'opponent') {
       this.scheduleAiMove();
     }
   }
@@ -416,11 +448,23 @@ export class BattleScene extends Phaser.Scene {
       });
     }
 
+    let opponentEnergy = this.state.opponentEnergy;
+    let status: BattleState['status'] = 'playing';
+
+    if (target) {
+      opponentEnergy = this.addReward(opponentEnergy, target);
+      if (target.isTrainer) {
+        status = 'lost';
+      }
+    }
+
     this.state = {
       ...this.state,
       selectedPieceId: null,
-      currentTurn: 'player',
-      turnNumber: this.state.turnNumber + 1,
+      currentTurn: status !== 'playing' ? 'opponent' : 'player',
+      turnNumber: status !== 'playing' ? this.state.turnNumber : this.state.turnNumber + 1,
+      opponentEnergy,
+      status,
       pieces: this.state.pieces
         .filter((p) => p.id !== target?.id)
         .map((p) =>

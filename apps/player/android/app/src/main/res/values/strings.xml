@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PokeChess</string>
+    <string name="title_activity_main">PokeChess</string>
+    <string name="package_name">com.pokechess.app</string>
+    <string name="custom_url_scheme">com.pokechess.app</string>
+</resources>

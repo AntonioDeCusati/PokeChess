@@ -1,4 +1,4 @@
-import type { BoardPosition, BattlePiece } from '@/types/battle';
+import type { BoardPosition } from '@/types/battle';
 
 export interface CustomAiMove {
   pieceId: string;

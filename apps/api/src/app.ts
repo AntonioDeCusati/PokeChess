@@ -11,6 +11,9 @@ import { boardConfigRouter } from './board-config/board-config.router';
 import { bootstrapRouter } from './app-bootstrap/bootstrap.router';
 import { devRouter } from './dev/dev.router';
 import { adminRouter } from './admin/admin.router';
+import { chestRouter } from './chest/chest.router';
+import { savedGameRouter } from './saved-game/saved-game.router';
+import { npcTrainerRouter } from './npc-trainer/npc-trainer.router';
 
 export function createApp(): Express {
   const app = express();
@@ -44,6 +47,9 @@ export function createApp(): Express {
   app.use('/board-config', boardConfigRouter);
   app.use('/app', bootstrapRouter);
   app.use('/admin', adminRouter);
+  app.use('/chests', chestRouter);
+  app.use('/saves', savedGameRouter);
+  app.use('/npc-trainers', npcTrainerRouter);
 
   // Dev-only helpers: mounted strictly outside production so the surface
   // cannot be reached on real deployments. In production NODE_ENV must be

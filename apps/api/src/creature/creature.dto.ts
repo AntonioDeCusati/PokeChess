@@ -64,6 +64,8 @@ export interface CreatureDto {
   canEvolve: boolean;
   /** ID of the creature this one evolves into (only present when canEvolve=true). */
   evolveToId?: string;
+  rewardType1: number;
+  rewardType2: number;
   /** Sprite animation data for this creature (idle / walk / attack / hurt). */
   animations: AnimationDto[];
 }
@@ -83,6 +85,8 @@ export function toCreatureDto(c: CreatureWithAnimations): CreatureDto {
     expMax: c.expMax,
     canEvolve: c.canEvolve,
     ...(c.evolveToId  ? { evolveToId: c.evolveToId } : {}),
+    rewardType1: c.rewardType1,
+    rewardType2: c.rewardType2,
     animations: c.animations.map(toAnimationDto),
   };
 }

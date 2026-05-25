@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const CreatureTypeEnum = z.enum([
-  'fire', 'water', 'grass', 'electric', 'poison', 'dark', 'ghost', 'dragon', 'light',
+  'normal','fire','water','grass','electric','ice','fighting','poison','ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy',
 ]);
 
 export const CreatureRarityEnum = z.enum(['common', 'rare', 'epic', 'legendary']);

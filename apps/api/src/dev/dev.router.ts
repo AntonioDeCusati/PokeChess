@@ -19,3 +19,5 @@ devRouter.post(
   validateBody(GrantCreaturesBody),
   controller.grantCreatures,
 );
+
+devRouter.post('/set-wallet', controller.setWallet);

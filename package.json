@@ -11,6 +11,10 @@
     "dev:player": "npm run dev --workspace @pokechess/player",
     "build:player": "npm run build --workspace @pokechess/player",
     "preview:player": "npm run preview --workspace @pokechess/player",
+    "cap:sync": "npm run cap:sync --workspace @pokechess/player",
+    "cap:build": "npm run cap:build --workspace @pokechess/player",
+    "cap:android": "npm run cap:android --workspace @pokechess/player",
+    "cap:ios": "npm run cap:ios --workspace @pokechess/player",
 
     "//admin": "----- Admin (backoffice scaffold) --------------------------",
     "dev:admin": "npm run dev --workspace @pokechess/admin",

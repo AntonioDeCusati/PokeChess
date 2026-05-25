@@ -27,21 +27,21 @@ function placeholderAnimations(): AnimationData[] {
 }
 
 const rows: Row[] = [
-  { slug: 'charizard',  pokedexNumber: 6,   pokedexPath: '0006', name: 'Charizard',  type1: 'fire',     type2: 'light',    rarity: 'rare',      expMax: 150, canEvolve: false, level: 16, currentExp: 80 },
+  { slug: 'charizard',  pokedexNumber: 6,   pokedexPath: '0006', name: 'Charizard',  type1: 'fire',     type2: 'flying',   rarity: 'rare',      expMax: 150, canEvolve: false, level: 16, currentExp: 80 },
   { slug: 'blastoise',  pokedexNumber: 9,   pokedexPath: '0009', name: 'Blastoise',  type1: 'water',                       rarity: 'rare',      expMax: 150, canEvolve: false, level: 15, currentExp: 55 },
   { slug: 'venusaur',   pokedexNumber: 3,   pokedexPath: '0003', name: 'Venusaur',   type1: 'grass',    type2: 'poison',   rarity: 'rare',      expMax: 150, canEvolve: false, level: 14, currentExp: 70 },
   { slug: 'pikachu',    pokedexNumber: 25,  pokedexPath: '0025', name: 'Pikachu',    type1: 'electric',                    rarity: 'common',    expMax: 100, canEvolve: true,  level: 13, currentExp: 20 },
   { slug: 'gengar',     pokedexNumber: 94,  pokedexPath: '0094', name: 'Gengar',     type1: 'ghost',    type2: 'poison',   rarity: 'rare',      expMax: 150, canEvolve: false, level: 10, currentExp: 30 },
-  { slug: 'dragonite',  pokedexNumber: 149, pokedexPath: '0149', name: 'Dragonite',  type1: 'dragon',   type2: 'light',    rarity: 'epic',      expMax: 200, canEvolve: false, level: 12, currentExp: 60 },
-  { slug: 'eevee',      pokedexNumber: 133, pokedexPath: '0133', name: 'Eevee',      type1: 'light',                       rarity: 'common',    expMax: 100, canEvolve: true,  level: 11, currentExp: 25 },
-  { slug: 'mewtwo',     pokedexNumber: 150, pokedexPath: '0150', name: 'Mewtwo',     type1: 'light',                       rarity: 'legendary', expMax: 300, canEvolve: false, level: 10, currentExp: 40 },
-  { slug: 'alakazam',   pokedexNumber: 65,  pokedexPath: '0065', name: 'Alakazam',   type1: 'light',                       rarity: 'rare',      expMax: 150, canEvolve: false, level:  9, currentExp: 15 },
-  { slug: 'machamp',    pokedexNumber: 68,  pokedexPath: '0068', name: 'Machamp',    type1: 'fire',                        rarity: 'rare',      expMax: 150, canEvolve: false, level: 10, currentExp: 35 },
+  { slug: 'dragonite',  pokedexNumber: 149, pokedexPath: '0149', name: 'Dragonite',  type1: 'dragon',   type2: 'flying',   rarity: 'epic',      expMax: 200, canEvolve: false, level: 12, currentExp: 60 },
+  { slug: 'eevee',      pokedexNumber: 133, pokedexPath: '0133', name: 'Eevee',      type1: 'normal',                      rarity: 'common',    expMax: 100, canEvolve: true,  level: 11, currentExp: 25 },
+  { slug: 'mewtwo',     pokedexNumber: 150, pokedexPath: '0150', name: 'Mewtwo',     type1: 'psychic',                     rarity: 'legendary', expMax: 300, canEvolve: false, level: 10, currentExp: 40 },
+  { slug: 'alakazam',   pokedexNumber: 65,  pokedexPath: '0065', name: 'Alakazam',   type1: 'psychic',                     rarity: 'rare',      expMax: 150, canEvolve: false, level:  9, currentExp: 15 },
+  { slug: 'machamp',    pokedexNumber: 68,  pokedexPath: '0068', name: 'Machamp',    type1: 'fighting',                    rarity: 'rare',      expMax: 150, canEvolve: false, level: 10, currentExp: 35 },
   { slug: 'arcanine',   pokedexNumber: 59,  pokedexPath: '0059', name: 'Arcanine',   type1: 'fire',                        rarity: 'rare',      expMax: 150, canEvolve: false, level:  8, currentExp: 50 },
-  { slug: 'gyarados',   pokedexNumber: 130, pokedexPath: '0130', name: 'Gyarados',   type1: 'water',    type2: 'light',    rarity: 'rare',      expMax: 150, canEvolve: false, level:  7, currentExp: 60, owned: false },
-  { slug: 'snorlax',    pokedexNumber: 143, pokedexPath: '0143', name: 'Snorlax',    type1: 'light',                       rarity: 'rare',      expMax: 150, canEvolve: false, level:  3, currentExp: 18 },
-  { slug: 'lucario',    pokedexNumber: 448, pokedexPath: '0448', name: 'Lucario',    type1: 'fire',     type2: 'electric', rarity: 'epic',      expMax: 200, canEvolve: false, level:  6, currentExp: 45 },
-  { slug: 'garchomp',   pokedexNumber: 445, pokedexPath: '0445', name: 'Garchomp',   type1: 'dragon',   type2: 'dark',     rarity: 'epic',      expMax: 200, canEvolve: false, level:  4, currentExp: 30 },
+  { slug: 'gyarados',   pokedexNumber: 130, pokedexPath: '0130', name: 'Gyarados',   type1: 'water',    type2: 'flying',   rarity: 'rare',      expMax: 150, canEvolve: false, level:  7, currentExp: 60, owned: false },
+  { slug: 'snorlax',    pokedexNumber: 143, pokedexPath: '0143', name: 'Snorlax',    type1: 'normal',                      rarity: 'rare',      expMax: 150, canEvolve: false, level:  3, currentExp: 18 },
+  { slug: 'lucario',    pokedexNumber: 448, pokedexPath: '0448', name: 'Lucario',    type1: 'fighting', type2: 'steel',    rarity: 'epic',      expMax: 200, canEvolve: false, level:  6, currentExp: 45 },
+  { slug: 'garchomp',   pokedexNumber: 445, pokedexPath: '0445', name: 'Garchomp',   type1: 'dragon',   type2: 'ground',   rarity: 'epic',      expMax: 200, canEvolve: false, level:  4, currentExp: 30 },
 ];
 
 export const creatures: readonly UserCreature[] = rows.map((r) => ({
@@ -55,6 +55,8 @@ export const creatures: readonly UserCreature[] = rows.map((r) => ({
   rarity:        r.rarity,
   expMax:        r.expMax,
   canEvolve:     r.canEvolve,
+  rewardType1:   1,
+  rewardType2:   1,
   animations:    placeholderAnimations(),
   level:         r.level,
   currentExp:    r.currentExp,

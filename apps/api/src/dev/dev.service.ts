@@ -73,4 +73,17 @@ export async function grantCreatures(
   };
 }
 
-
+export async function setWallet(
+  userId: string,
+  body: { gold?: number; gems?: number },
+) {
+  const user = await prisma.user.update({
+    where: { id: userId },
+    data: {
+      ...(body.gold !== undefined ? { gold: body.gold } : {}),
+      ...(body.gems !== undefined ? { gems: body.gems } : {}),
+    },
+    select: { id: true, gold: true, gems: true },
+  });
+  return { id: user.id, gold: user.gold, gems: user.gems };
+}

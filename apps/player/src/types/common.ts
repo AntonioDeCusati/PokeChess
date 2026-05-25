@@ -19,15 +19,24 @@ export type SupportId = Id<'Support'>;
 
 /** Creature element / type palette used everywhere (cards, gyms, badges). */
 export type CreatureType =
+  | 'normal'
   | 'fire'
   | 'water'
   | 'grass'
   | 'electric'
+  | 'ice'
+  | 'fighting'
   | 'poison'
-  | 'dark'
+  | 'ground'
+  | 'flying'
+  | 'psychic'
+  | 'bug'
+  | 'rock'
   | 'ghost'
   | 'dragon'
-  | 'light';
+  | 'dark'
+  | 'steel'
+  | 'fairy';
 
 /**
  * Asset reference — the ONLY way components know which artwork to render.

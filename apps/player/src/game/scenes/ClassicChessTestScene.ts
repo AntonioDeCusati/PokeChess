@@ -108,8 +108,7 @@ export class ClassicChessTestScene extends Phaser.Scene {
     this.statusText.setText(`Status: ${text}`);
   }
 
-  destroy() {
+  shutdown() {
     this.ai?.dispose();
-    super.destroy();
   }
 }

@@ -11,6 +11,9 @@ export const MoveIdSchema = z.enum([
   'l-shape',
   'jump',
   'projection',
+  'pawn',
+  'king',
+  'rook',
 ]);
 export type MoveId = z.infer<typeof MoveIdSchema>;
 

@@ -1,18 +1,8 @@
 import type {
-  Gym,
-  GymId,
   LeagueEvent,
   LeagueEventId,
-  TrainingTier,
 } from '@/types';
-import { creatureSprite, uiSprite } from './sprites';
-
-/**
- * League screen (mockup #4).
- * - 1 live event (Torneo del Fuoco)
- * - 3 training tiers (facile / medio / difficile)
- * - 4 gyms (luce, fuoco, natura, ombra) with defeat/lock states
- */
+import { creatureSprite } from './sprites';
 
 export const liveEvents: readonly LeagueEvent[] = [
   {
@@ -22,60 +12,31 @@ export const liveEvents: readonly LeagueEvent[] = [
     heroSprite: creatureSprite('fire', 99, 'TF'),
     maxReward: { gems: 1_200, gold: 5_000 },
   },
+  {
+    id: 'event-sfida-acqua' as LeagueEventId,
+    title: 'Sfida delle Onde',
+    endsAt: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString(),
+    heroSprite: creatureSprite('water', 99, 'SO'),
+    maxReward: { gems: 800, gold: 3_000 },
+  },
+  {
+    id: 'event-arena-drago' as LeagueEventId,
+    title: 'Arena dei Draghi',
+    endsAt: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000).toISOString(),
+    heroSprite: creatureSprite('dragon', 99, 'AD'),
+    maxReward: { gems: 2_000, gold: 8_000 },
+  },
+  {
+    id: 'event-notte-spettri' as LeagueEventId,
+    title: 'Notte degli Spettri',
+    endsAt: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000 + 8 * 60 * 60 * 1000).toISOString(),
+    heroSprite: creatureSprite('ghost', 99, 'NS'),
+    maxReward: { gems: 1_500, gold: 6_000 },
+  },
 ];
 
-export const trainingTiers: readonly TrainingTier[] = [
-  {
-    difficulty: 'easy',
-    rewardKind: 'xp',
-    rewardAmount: 50,
-    rewardSprite: uiSprite('reward-xp', 'XP'),
-  },
-  {
-    difficulty: 'medium',
-    rewardKind: 'gold',
-    rewardAmount: 100,
-    rewardSprite: uiSprite('reward-gold', 'GD'),
-  },
-  {
-    difficulty: 'hard',
-    rewardKind: 'item',
-    rewardAmount: 200,
-    rewardSprite: uiSprite('reward-relic', 'RL'),
-  },
-];
+export const REGIONS = [
+  'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unima', 'Kalos', 'Alola', 'Galar', 'Paldea',
+] as const;
 
-export const gyms: readonly Gym[] = [
-  {
-    id: 'gym-light' as GymId,
-    name: 'Luce',
-    type: 'light',
-    sprite: creatureSprite('water', 10, 'L'),
-    defeated: true,
-    locked: false,
-  },
-  {
-    id: 'gym-fire' as GymId,
-    name: 'Fuoco',
-    type: 'fire',
-    sprite: creatureSprite('fire', 10, 'F'),
-    defeated: true,
-    locked: false,
-  },
-  {
-    id: 'gym-nature' as GymId,
-    name: 'Natura',
-    type: 'grass',
-    sprite: creatureSprite('grass', 10, 'N'),
-    defeated: false,
-    locked: true,
-  },
-  {
-    id: 'gym-shadow' as GymId,
-    name: 'Ombra',
-    type: 'poison',
-    sprite: creatureSprite('poison', 10, 'O'),
-    defeated: false,
-    locked: true,
-  },
-];
+export type Region = typeof REGIONS[number];

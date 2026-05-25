@@ -33,7 +33,7 @@ interface Creature {
   createdAt: string;
 }
 
-const TYPES = ['fire', 'water', 'grass', 'electric', 'poison', 'dark', 'ghost', 'dragon', 'light'] as const;
+const TYPES = ['normal','fire','water','grass','electric','ice','fighting','poison','ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy'] as const;
 const RARITIES = ['common', 'rare', 'epic', 'legendary'] as const;
 
 const typeColors: Record<string, string> = {

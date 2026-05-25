@@ -7,12 +7,14 @@ export interface PrimaLineaSectionProps {
   creatures: UserCreature[];
   teamSlots: TeamSlot[] | null;
   onChangeSlot?: (slotIndex: number) => void;
+  onChangeMove?: (slotIndex: number) => void;
 }
 
 export function PrimaLineaSection({
-  creatures,
+  creatures = [],
   teamSlots,
   onChangeSlot,
+  onChangeMove,
 }: PrimaLineaSectionProps) {
   const creatureMap = new Map(creatures.map((c) => [c.id, c]));
   const slots = teamSlots ?? [];
@@ -37,6 +39,7 @@ export function PrimaLineaSection({
                 creature={creature}
                 move={move}
                 onChange={onChangeSlot}
+                onChangeMove={onChangeMove}
               />
             </li>
           );

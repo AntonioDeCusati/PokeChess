@@ -8,15 +8,24 @@ export interface CreatureCardProps {
 }
 
 const typeTint: Record<CreatureType, { glow: string; bar: string }> = {
-  fire:     { glow: '#E85C3A', bar: '#E85C3A' },
-  water:    { glow: '#4FA8E0', bar: '#4FA8E0' },
-  grass:    { glow: '#5BBF4A', bar: '#5BBF4A' },
-  electric: { glow: '#E8C244', bar: '#E8C244' },
-  poison:   { glow: '#8A4FB8', bar: '#8A4FB8' },
-  dark:     { glow: '#3E4454', bar: '#6B7280' },
-  ghost:    { glow: '#C7C7D1', bar: '#C7C7D1' },
-  dragon:   { glow: '#55B89C', bar: '#55B89C' },
-  light:    { glow: '#EDE8D0', bar: '#EDE8D0' },
+  normal:   { glow: '#A8A878', bar: '#A8A878' },
+  fire:     { glow: '#F08030', bar: '#F08030' },
+  water:    { glow: '#6890F0', bar: '#6890F0' },
+  grass:    { glow: '#78C850', bar: '#78C850' },
+  electric: { glow: '#F8D030', bar: '#F8D030' },
+  ice:      { glow: '#98D8D8', bar: '#98D8D8' },
+  fighting: { glow: '#C03028', bar: '#C03028' },
+  poison:   { glow: '#A040A0', bar: '#A040A0' },
+  ground:   { glow: '#E0C068', bar: '#E0C068' },
+  flying:   { glow: '#A890F0', bar: '#A890F0' },
+  psychic:  { glow: '#F85888', bar: '#F85888' },
+  bug:      { glow: '#A8B820', bar: '#A8B820' },
+  rock:     { glow: '#B8A038', bar: '#B8A038' },
+  ghost:    { glow: '#705898', bar: '#705898' },
+  dragon:   { glow: '#7038F8', bar: '#7038F8' },
+  dark:     { glow: '#705848', bar: '#705848' },
+  steel:    { glow: '#B8B8D0', bar: '#B8B8D0' },
+  fairy:    { glow: '#EE99AC', bar: '#EE99AC' },
 };
 
 /**

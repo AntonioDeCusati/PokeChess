@@ -1,54 +1,97 @@
 import type { CreatureType } from '@/types';
 
-export type CollezioneFilterValue = 'all' | CreatureType;
+export type CollezioneFilterValue = 'all' | 'owned' | CreatureType;
 
-const FILTER_OPTIONS: Array<{ value: CollezioneFilterValue; label: string }> = [
-  { value: 'all',      label: 'Tutti' },
-  { value: 'fire',     label: 'Fuoco' },
-  { value: 'water',    label: 'Acqua' },
-  { value: 'grass',    label: 'Natura' },
-  { value: 'electric', label: 'Elettro' },
-  { value: 'poison',   label: 'Veleno' },
-  { value: 'dark',     label: 'Oscurità' },
-  { value: 'ghost',    label: 'Spettro' },
-  { value: 'dragon',   label: 'Drago' },
-  { value: 'light',    label: 'Luce' },
+const TYPE_OPTIONS: Array<{ value: CreatureType; label: string; icon: string; color: string }> = [
+  { value: 'normal',   label: 'Normale',  icon: '⚪', color: '#A8A878' },
+  { value: 'fire',     label: 'Fuoco',    icon: '🔥', color: '#F08030' },
+  { value: 'water',    label: 'Acqua',    icon: '💧', color: '#6890F0' },
+  { value: 'grass',    label: 'Erba',     icon: '🌿', color: '#78C850' },
+  { value: 'electric', label: 'Elettro',  icon: '⚡', color: '#F8D030' },
+  { value: 'ice',      label: 'Ghiaccio', icon: '❄️', color: '#98D8D8' },
+  { value: 'fighting', label: 'Lotta',    icon: '🥊', color: '#C03028' },
+  { value: 'poison',   label: 'Veleno',   icon: '☠️', color: '#A040A0' },
+  { value: 'ground',   label: 'Terra',    icon: '🏔️', color: '#E0C068' },
+  { value: 'flying',   label: 'Volante',  icon: '🕊️', color: '#A890F0' },
+  { value: 'psychic',  label: 'Psico',    icon: '🔮', color: '#F85888' },
+  { value: 'bug',      label: 'Coleott.', icon: '🐛', color: '#A8B820' },
+  { value: 'rock',     label: 'Roccia',   icon: '🪨', color: '#B8A038' },
+  { value: 'ghost',    label: 'Spettro',  icon: '👻', color: '#705898' },
+  { value: 'dragon',   label: 'Drago',    icon: '🐉', color: '#7038F8' },
+  { value: 'dark',     label: 'Buio',     icon: '🌑', color: '#705848' },
+  { value: 'steel',    label: 'Acciaio',  icon: '⚙️', color: '#B8B8D0' },
+  { value: 'fairy',    label: 'Folletto', icon: '🧚', color: '#EE99AC' },
 ];
 
 export interface CollezioneFilterProps {
   value: CollezioneFilterValue;
   onChange: (value: CollezioneFilterValue) => void;
+  showOwnedFilter?: boolean;
 }
 
-/** Native <select> styled for the dark theme — fastest + most mobile-friendly. */
-export function CollezioneFilter({ value, onChange }: CollezioneFilterProps) {
+export function CollezioneFilter({ value, onChange, showOwnedFilter }: CollezioneFilterProps) {
   return (
-    <label className="flex items-center gap-1 text-xxs text-text-secondary">
-      <span className="hidden sm:inline">Filtra:</span>
-      <div className="relative">
-        <select
-          value={value}
-          onChange={(e) => onChange(e.target.value as CollezioneFilterValue)}
-          className="
-            appearance-none rounded-tile border border-border-subtle
-            bg-bg-elevated py-1 pl-2 pr-6 text-xxs font-medium text-text-primary
-            focus:border-accent focus:outline-none
-          "
-        >
-          {FILTER_OPTIONS.map((opt) => (
-            <option key={opt.value} value={opt.value}>
-              Filtra: {opt.label}
-            </option>
-          ))}
-        </select>
-        <svg
-          aria-hidden
-          viewBox="0 0 12 12"
-          className="pointer-events-none absolute right-1.5 top-1/2 h-3 w-3 -translate-y-1/2 text-text-secondary"
-        >
-          <path d="M3 5l3 3 3-3" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </div>
-    </label>
+    <div className="flex gap-1.5 overflow-x-auto no-scrollbar py-1 -mx-1 px-1">
+      <FilterPill
+        active={value === 'all'}
+        onClick={() => onChange('all')}
+        label="Tutti"
+      />
+      {showOwnedFilter && (
+        <FilterPill
+          active={value === 'owned'}
+          onClick={() => onChange('owned')}
+          label="Posseduti"
+          color="#3FA9F5"
+        />
+      )}
+      {TYPE_OPTIONS.map((opt) => (
+        <FilterPill
+          key={opt.value}
+          active={value === opt.value}
+          onClick={() => onChange(opt.value)}
+          label={opt.icon}
+          title={opt.label}
+          color={opt.color}
+        />
+      ))}
+    </div>
+  );
+}
+
+function FilterPill({
+  active,
+  onClick,
+  label,
+  title,
+  color,
+}: {
+  active: boolean;
+  onClick: () => void;
+  label: string;
+  title?: string;
+  color?: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      title={title}
+      className={`
+        shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold transition
+        ${active
+          ? 'ring-1 ring-inset'
+          : 'bg-bg-elevated/60 text-text-secondary hover:bg-bg-elevated'
+        }
+      `}
+      style={active && color
+        ? { backgroundColor: color + '25', color, borderColor: color, '--tw-ring-color': color } as React.CSSProperties
+        : active
+          ? { backgroundColor: 'rgba(255,255,255,0.12)', color: '#fff' }
+          : undefined
+      }
+    >
+      {label}
+    </button>
   );
 }

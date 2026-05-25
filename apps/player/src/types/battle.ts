@@ -1,4 +1,5 @@
 import type { MovePattern } from './move';
+import type { CreatureType } from './common';
 
 export interface BoardPosition {
   row: number;
@@ -9,19 +10,30 @@ export interface BattlePiece {
   id: string;
   owner: 'player' | 'opponent';
   creatureId: string;
-  /** Creature display name (cached for HUD). */
   name: string;
-  /** Portrait path (e.g. "0006") for sprite resolution. */
   pokedexPath: string;
-  /** Movement pattern assigned to this piece. */
   movementType: MovePattern;
   row: number;
   col: number;
   hp: number;
   maxHp: number;
   isTrainer?: boolean;
+  type1: CreatureType;
+  type2?: CreatureType;
+  rewardType1: number;
+  rewardType2: number;
   selected?: boolean;
   availableMoves?: BoardPosition[];
+}
+
+export type EnergyBank = Record<CreatureType, number>;
+
+export function emptyEnergyBank(): EnergyBank {
+  return {
+    normal: 0, fire: 0, water: 0, grass: 0, electric: 0, ice: 0,
+    fighting: 0, poison: 0, ground: 0, flying: 0, psychic: 0,
+    bug: 0, rock: 0, ghost: 0, dragon: 0, dark: 0, steel: 0, fairy: 0,
+  };
 }
 
 export interface BattlePlayer {
@@ -38,6 +50,8 @@ export interface BattleState {
   pieces: BattlePiece[];
   player: BattlePlayer;
   opponent: BattlePlayer;
+  playerEnergy: EnergyBank;
+  opponentEnergy: EnergyBank;
   status: 'playing' | 'won' | 'lost' | 'draw';
 }
 

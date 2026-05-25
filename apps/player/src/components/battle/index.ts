@@ -7,3 +7,4 @@ export * from './SelectedPiecePanel';
 export * from './InspectPiecePanel';
 export * from './BattleControls';
 export * from './PhaserBattle';
+export * from './BattleEndScreen';

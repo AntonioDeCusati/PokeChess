@@ -14,7 +14,7 @@ export interface CollezioneSectionProps {
 }
 
 export function CollezioneSection({
-  creatures,
+  creatures = [],
   columns = 5,
   onSelectCreature,
 }: CollezioneSectionProps) {
@@ -24,7 +24,7 @@ export function CollezioneSection({
     () =>
       filter === 'all'
         ? creatures
-        : creatures.filter((c) => c.type1 === filter),
+        : creatures.filter((c) => c.type1 === filter || c.type2 === filter),
     [creatures, filter],
   );
 

@@ -1,6 +1,7 @@
 import { Outlet, ScrollRestoration } from 'react-router-dom';
 import { GameHeader } from './GameHeader';
 import { BottomNav } from './BottomNav';
+import { useProfile } from '@/hooks/useProfile';
 
 /**
  * Global app frame.
@@ -16,9 +17,11 @@ import { BottomNav } from './BottomNav';
  *   on <main> so content never hides behind the fixed bars.
  */
 export function AppShell() {
+  const { profile } = useProfile();
+
   return (
     <div className="relative mx-auto flex min-h-dvh w-full max-w-app flex-col bg-bg-base">
-      <GameHeader />
+      <GameHeader profile={profile} />
 
       <main
         className="flex-1 overflow-y-auto"

@@ -4,10 +4,13 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { AuthProvider } from '@/lib/auth';
+import { ProfileProvider } from '@/hooks/useProfile';
 import { AppShell } from '@/layout';
 import {
   BattlePage,
   BoardPage,
+  CampaignPage,
+  TrainingPage,
   ChessTestPage,
   FriendsPage,
   HomePage,
@@ -42,6 +45,8 @@ const router = createBrowserRouter([
       { path: routePaths.shop,    element: <ShopPage /> },
       { path: routePaths.league,  element: <LeaguePage /> },
       { path: routePaths.friends, element: <FriendsPage /> },
+      { path: '/campaign', element: <CampaignPage /> },
+      { path: '/training', element: <TrainingPage /> },
       { path: '*', element: <Navigate to={routePaths.home} replace /> },
     ],
   },
@@ -50,7 +55,9 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <ProfileProvider>
+        <RouterProvider router={router} />
+      </ProfileProvider>
     </AuthProvider>
   );
 }

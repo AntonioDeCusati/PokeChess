@@ -6,3 +6,9 @@ export const grantCreatures = asyncHandler(async (req, res) => {
   const result = await service.grantCreatures(req.userId, req.body);
   res.json(result);
 });
+
+export const setWallet = asyncHandler(async (req, res) => {
+  if (!req.userId) throw HttpError.unauthorized();
+  const result = await service.setWallet(req.userId, req.body);
+  res.json(result);
+});

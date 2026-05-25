@@ -1,0 +1,3997 @@
+{
+  "Kanto": [
+    {
+      "nome": "Oak",
+      "ruolo": "Professore",
+      "tipo": "Misto",
+      "team_base": [
+        "Charmander",
+        "Squirtle",
+        "Bulbasaur",
+        "Eevee",
+        "Pichu",
+        "Cleffa"
+      ],
+      "team_intermedio": [
+        "Charmeleon",
+        "Wartortle",
+        "Ivysaur",
+        "Eevee",
+        "Pikachu",
+        "Clefairy"
+      ],
+      "team_finale": [
+        "Charizard",
+        "Raichu",
+        "Clefable",
+        "Umbreon",
+        "Blastoise",
+        "Venusaur"
+      ]
+    },
+    {
+      "nome": "Brock",
+      "ruolo": "Capopalestra",
+      "tipo": "Roccia",
+      "team_base": [
+        "Geodude",
+        "Onix",
+        "Roggenrola",
+        "Rhyhorn",
+        "Nosepass",
+        "Larvitar"
+      ],
+      "team_intermedio": [
+        "Graveler",
+        "Boldore",
+        "Rhydon",
+        "Pupitar",
+        "Lairon",
+        "Corsola"
+      ],
+      "team_finale": [
+        "Tyranitar",
+        "Steelix",
+        "Rhyperior",
+        "Lycanroc",
+        "Garganacl",
+        "Aerodactyl"
+      ]
+    },
+    {
+      "nome": "Misty",
+      "ruolo": "Capopalestra",
+      "tipo": "Acqua",
+      "team_base": [
+        "Poliwag",
+        "Horsea",
+        "Wooper",
+        "Shellder",
+        "Finneon",
+        "Buizel"
+      ],
+      "team_intermedio": [
+        "Poliwhirl",
+        "Seadra",
+        "Quagsire",
+        "Dewgong",
+        "Lanturn",
+        "Floatzel"
+      ],
+      "team_finale": [
+        "Milotic",
+        "Greninja",
+        "Lapras",
+        "Swampert",
+        "Starmie",
+        "Empoleon"
+      ]
+    },
+    {
+      "nome": "Lt. Surge",
+      "ruolo": "Capopalestra",
+      "tipo": "Elettro",
+      "team_base": [
+        "Voltorb",
+        "Shinx",
+        "Mareep",
+        "Elekid",
+        "Blitzle",
+        "Tynamo"
+      ],
+      "team_intermedio": [
+        "Electrode",
+        "Luxio",
+        "Flaaffy",
+        "Electabuzz",
+        "Zebstrika",
+        "Eelektrik"
+      ],
+      "team_finale": [
+        "Magnezone",
+        "Rotom",
+        "Ampharos",
+        "Zeraora",
+        "Bellibolt",
+        "Toxtricity"
+      ]
+    },
+    {
+      "nome": "Erika",
+      "ruolo": "Capopalestra",
+      "tipo": "Erba",
+      "team_base": [
+        "Petilil",
+        "Foongus",
+        "Sewaddle",
+        "Hoppip",
+        "Capsakid",
+        "Sprigatito"
+      ],
+      "team_intermedio": [
+        "Lilligant",
+        "Amoonguss",
+        "Swadloon",
+        "Skiploom",
+        "Floragato",
+        "Bayleef"
+      ],
+      "team_finale": [
+        "Ferrothorn",
+        "Meowscarada",
+        "Leafeon",
+        "Tsareena",
+        "Torterra",
+        "Victreebel"
+      ]
+    },
+    {
+      "nome": "Koga",
+      "ruolo": "Capopalestra",
+      "tipo": "Veleno",
+      "team_base": [
+        "Croagunk",
+        "Skorupi",
+        "Venipede",
+        "Foongus",
+        "Mareanie",
+        "Glimmet"
+      ],
+      "team_intermedio": [
+        "Toxicroak",
+        "Drapion",
+        "Whirlipede",
+        "Amoonguss",
+        "Toxapex",
+        "Glimmora"
+      ],
+      "team_finale": [
+        "Nidoking",
+        "Sneasler",
+        "Drapion",
+        "Amoonguss",
+        "Toxtricity",
+        "Clodsire"
+      ]
+    },
+    {
+      "nome": "Sabrina",
+      "ruolo": "Capopalestra",
+      "tipo": "Psico",
+      "team_base": [
+        "Espurr",
+        "Natu",
+        "Spoink",
+        "Meditite",
+        "Bronzor",
+        "Hatenna"
+      ],
+      "team_intermedio": [
+        "Meowstic",
+        "Xatu",
+        "Grumpig",
+        "Medicham",
+        "Bronzong",
+        "Hattrem"
+      ],
+      "team_finale": [
+        "Espeon",
+        "Slowking",
+        "Indeedee",
+        "Reuniclus",
+        "Gothitelle",
+        "Medicham"
+      ]
+    },
+    {
+      "nome": "Blaine",
+      "ruolo": "Capopalestra",
+      "tipo": "Fuoco",
+      "team_base": [
+        "Fletchling",
+        "Slugma",
+        "Torchic",
+        "Chimchar",
+        "Fuecoco",
+        "Charcadet"
+      ],
+      "team_intermedio": [
+        "Fletchinder",
+        "Magmar",
+        "Combusken",
+        "Monferno",
+        "Crocalor",
+        "Charmeleon"
+      ],
+      "team_finale": [
+        "Skeledirge",
+        "Infernape",
+        "Talonflame",
+        "Houndoom",
+        "Cinderace",
+        "Typhlosion"
+      ]
+    },
+    {
+      "nome": "Giovanni",
+      "ruolo": "Capopalestra",
+      "tipo": "Terra",
+      "team_base": [
+        "Gible",
+        "Sandile",
+        "Numel",
+        "Barboach",
+        "Paldean Wooper",
+        "Sandshrew"
+      ],
+      "team_intermedio": [
+        "Krokorok",
+        "Camerupt",
+        "Whiscash",
+        "Clodsire",
+        "Nidorino",
+        "Sandslash"
+      ],
+      "team_finale": [
+        "Flygon",
+        "Donphan",
+        "Swampert",
+        "Gastrodon",
+        "Mudsdale",
+        "Garchomp"
+      ]
+    },
+    {
+      "nome": "Lorelei",
+      "ruolo": "Superquattro",
+      "tipo": "Ghiaccio",
+      "team_base": [
+        "Sneasel",
+        "Vanillite",
+        "Amaura",
+        "Frigibax",
+        "Swinub",
+        "Snorunt"
+      ],
+      "team_intermedio": [
+        "Arctibax",
+        "Aurorus",
+        "Abomasnow",
+        "Bergmite",
+        "Piloswine",
+        "Glalie"
+      ],
+      "team_finale": [
+        "Aurorus",
+        "Abomasnow",
+        "Frosmoth",
+        "Cloyster",
+        "Mamoswine",
+        "Weavile"
+      ]
+    },
+    {
+      "nome": "Bruno",
+      "ruolo": "Superquattro",
+      "tipo": "Lotta",
+      "team_base": [
+        "Hawlucha",
+        "Stufful",
+        "Flamigo",
+        "Machop",
+        "Mankey",
+        "Riolu"
+      ],
+      "team_intermedio": [
+        "Bewear",
+        "Pangoro",
+        "Falinks",
+        "Machoke",
+        "Primeape",
+        "Lucario"
+      ],
+      "team_finale": [
+        "Hariyama",
+        "Great Tusk",
+        "Iron Hands",
+        "Machamp",
+        "Annihilape",
+        "Lucario"
+      ]
+    },
+    {
+      "nome": "Agatha",
+      "ruolo": "Superquattro",
+      "tipo": "Spettro",
+      "team_base": [
+        "Sinistea",
+        "Yamask",
+        "Gastly",
+        "Shuppet",
+        "Duskull",
+        "Misdreavus"
+      ],
+      "team_intermedio": [
+        "Polteageist",
+        "Runerigus",
+        "Haunter",
+        "Dusclops",
+        "Banette",
+        "Mismagius"
+      ],
+      "team_finale": [
+        "Decidueye",
+        "Ceruledge",
+        "Gengar",
+        "Aegislash",
+        "Dragapult",
+        "Mimikyu"
+      ]
+    },
+    {
+      "nome": "Lance",
+      "ruolo": "Superquattro",
+      "tipo": "Drago",
+      "team_base": [
+        "Applin",
+        "Dratini",
+        "Gible",
+        "Axew",
+        "Bagon",
+        "Trapinch"
+      ],
+      "team_intermedio": [
+        "Dipplin",
+        "Dragonair",
+        "Gabite",
+        "Fraxure",
+        "Shelgon",
+        "Vibrava"
+      ],
+      "team_finale": [
+        "Gyarados",
+        "Aerodactyl",
+        "Charizard",
+        "Kingdra",
+        "Salamence",
+        "Dragonite"
+      ]
+    },
+    {
+      "nome": "Blue",
+      "ruolo": "Campione",
+      "tipo": "Misto",
+      "team_base": [
+        "Eevee",
+        "Riolu",
+        "Larvitar",
+        "Dratini",
+        "Ralts",
+        "Gastly"
+      ],
+      "team_intermedio": [
+        "Lucario",
+        "Dragonair",
+        "Pupitar",
+        "Kirlia",
+        "Haunter",
+        "Gabite"
+      ],
+      "team_finale": [
+        "Pidgeot",
+        "Alakazam",
+        "Arcanine",
+        "Rhyperior",
+        "Gyarados",
+        "Exeggutor"
+      ]
+    }
+  ],
+  "Johto": [
+    {
+      "nome": "Falkner",
+      "ruolo": "Capopalestra",
+      "tipo": "Volante",
+      "team_base": [
+        "Pidgey",
+        "Hoothoot",
+        "Taillow",
+        "Starly",
+        "Rufflet",
+        "Fletchling"
+      ],
+      "team_intermedio": [
+        "Pidgeotto",
+        "Noctowl",
+        "Staravia",
+        "Swellow",
+        "Tranquill",
+        "Fearow"
+      ],
+      "team_finale": [
+        "Corviknight",
+        "Talonflame",
+        "Staraptor",
+        "Dragonite",
+        "Togekiss",
+        "Skarmory"
+      ]
+    },
+    {
+      "nome": "Bugsy",
+      "ruolo": "Capopalestra",
+      "tipo": "Coleottero",
+      "team_base": [
+        "Weedle",
+        "Spinarak",
+        "Venipede",
+        "Sewaddle",
+        "Grubbin",
+        "Scatterbug"
+      ],
+      "team_intermedio": [
+        "Kakuna",
+        "Ariados",
+        "Whirlipede",
+        "Charjabug",
+        "Dottler",
+        "Swadloon"
+      ],
+      "team_finale": [
+        "Volcarona",
+        "Heracross",
+        "Vikavolt",
+        "Lokix",
+        "Galvantula",
+        "Kleavor"
+      ]
+    },
+    {
+      "nome": "Whitney",
+      "ruolo": "Capopalestra",
+      "tipo": "Normale",
+      "team_base": [
+        "Aipom",
+        "Buneary",
+        "Lillipup",
+        "Munchlax",
+        "Sentret",
+        "Skwovet"
+      ],
+      "team_intermedio": [
+        "Ambipom",
+        "Lopunny",
+        "Herdier",
+        "Porygon2",
+        "Dubwool",
+        "Bibarel"
+      ],
+      "team_finale": [
+        "Ursaluna",
+        "Blissey",
+        "Staraptor",
+        "Maushold",
+        "Zangoose",
+        "Indeedee"
+      ]
+    },
+    {
+      "nome": "Morty",
+      "ruolo": "Capopalestra",
+      "tipo": "Spettro",
+      "team_base": [
+        "Misdreavus",
+        "Greavard",
+        "Frillish",
+        "Litwick",
+        "Phantump",
+        "Dreepy"
+      ],
+      "team_intermedio": [
+        "Mismagius",
+        "Lampent",
+        "Drifblim",
+        "Gourgeist",
+        "Cursola",
+        "Drakloak"
+      ],
+      "team_finale": [
+        "Mimikyu",
+        "Chandelure",
+        "Annihilape",
+        "Skeledirge",
+        "Flutter Mane",
+        "Dusknoir"
+      ]
+    },
+    {
+      "nome": "Chuck",
+      "ruolo": "Capopalestra",
+      "tipo": "Lotta",
+      "team_base": [
+        "Timburr",
+        "Croagunk",
+        "Makuhita",
+        "Tyrogue",
+        "Mienfoo",
+        "Hawlucha"
+      ],
+      "team_intermedio": [
+        "Gurdurr",
+        "Toxicroak",
+        "Hariyama",
+        "Hitmontop",
+        "Mienshao",
+        "Bewear"
+      ],
+      "team_finale": [
+        "Blaziken",
+        "Kommo-o",
+        "Conkeldurr",
+        "Hawlucha",
+        "Mienshao",
+        "Hariyama"
+      ]
+    },
+    {
+      "nome": "Jasmine",
+      "ruolo": "Capopalestra",
+      "tipo": "Acciaio",
+      "team_base": [
+        "Ferroseed",
+        "Bronzor",
+        "Varoom",
+        "Klink",
+        "Honedge",
+        "Rookidee"
+      ],
+      "team_intermedio": [
+        "Klang",
+        "Bronzong",
+        "Revavroom",
+        "Doublade",
+        "Corvisquire",
+        "Ferrothorn"
+      ],
+      "team_finale": [
+        "Lucario",
+        "Scizor",
+        "Aegislash",
+        "Aggron",
+        "Revavroom",
+        "Ferrothorn"
+      ]
+    },
+    {
+      "nome": "Pryce",
+      "ruolo": "Capopalestra",
+      "tipo": "Ghiaccio",
+      "team_base": [
+        "Cetoddle",
+        "Delibird",
+        "Sneasel",
+        "Vanillite",
+        "Amaura",
+        "Frigibax"
+      ],
+      "team_intermedio": [
+        "Vanillish",
+        "Sneasel",
+        "Arctibax",
+        "Aurorus",
+        "Abomasnow",
+        "Bergmite"
+      ],
+      "team_finale": [
+        "Glaceon",
+        "Walrein",
+        "Aurorus",
+        "Abomasnow",
+        "Frosmoth",
+        "Cloyster"
+      ]
+    },
+    {
+      "nome": "Clair",
+      "ruolo": "Capopalestra",
+      "tipo": "Drago",
+      "team_base": [
+        "Dreepy",
+        "Jangmo-o",
+        "Frigibax",
+        "Goomy",
+        "Applin",
+        "Dratini"
+      ],
+      "team_intermedio": [
+        "Drakloak",
+        "Hakamo-o",
+        "Arctibax",
+        "Sliggoo",
+        "Dipplin",
+        "Dragonair"
+      ],
+      "team_finale": [
+        "Baxcalibur",
+        "Goodra",
+        "Flygon",
+        "Noivern",
+        "Kingdra",
+        "Dragonite"
+      ]
+    },
+    {
+      "nome": "Will",
+      "ruolo": "Superquattro",
+      "tipo": "Psico",
+      "team_base": [
+        "Meditite",
+        "Bronzor",
+        "Hatenna",
+        "Indeedee",
+        "Abra",
+        "Drowzee"
+      ],
+      "team_intermedio": [
+        "Medicham",
+        "Bronzong",
+        "Hattrem",
+        "Mr. Mime",
+        "Kadabra",
+        "Hypno"
+      ],
+      "team_finale": [
+        "Reuniclus",
+        "Gothitelle",
+        "Medicham",
+        "Bronzong",
+        "Alakazam",
+        "Gardevoir"
+      ]
+    },
+    {
+      "nome": "Koga",
+      "ruolo": "Superquattro",
+      "tipo": "Veleno",
+      "team_base": [
+        "Glimmet",
+        "Nidoran♂",
+        "Paldean Wooper",
+        "Zubat",
+        "Grimer",
+        "Koffing"
+      ],
+      "team_intermedio": [
+        "Glimmora",
+        "Nidorino",
+        "Clodsire",
+        "Golbat",
+        "Muk",
+        "Weezing"
+      ],
+      "team_finale": [
+        "Clodsire",
+        "Venusaur",
+        "Salazzle",
+        "Crobat",
+        "Gengar",
+        "Toxapex"
+      ]
+    },
+    {
+      "nome": "Bruno",
+      "ruolo": "Superquattro",
+      "tipo": "Lotta",
+      "team_base": [
+        "Stufful",
+        "Flamigo",
+        "Machop",
+        "Mankey",
+        "Riolu",
+        "Meditite"
+      ],
+      "team_intermedio": [
+        "Pangoro",
+        "Falinks",
+        "Machoke",
+        "Primeape",
+        "Lucario",
+        "Medicham"
+      ],
+      "team_finale": [
+        "Great Tusk",
+        "Iron Hands",
+        "Machamp",
+        "Annihilape",
+        "Lucario",
+        "Gallade"
+      ]
+    },
+    {
+      "nome": "Karen",
+      "ruolo": "Superquattro",
+      "tipo": "Buio",
+      "team_base": [
+        "Maschiff",
+        "Poochyena",
+        "Houndour",
+        "Murkrow",
+        "Purrloin",
+        "Nickit"
+      ],
+      "team_intermedio": [
+        "Mabosstiff",
+        "Mightyena",
+        "Houndoom",
+        "Honchkrow",
+        "Liepard",
+        "Zweilous"
+      ],
+      "team_finale": [
+        "Mabosstiff",
+        "Hydreigon",
+        "Tyranitar",
+        "Kingambit",
+        "Weavile",
+        "Umbreon"
+      ]
+    },
+    {
+      "nome": "Lance",
+      "ruolo": "Campione",
+      "tipo": "Drago",
+      "team_base": [
+        "Dratini",
+        "Gible",
+        "Axew",
+        "Bagon",
+        "Trapinch",
+        "Deino"
+      ],
+      "team_intermedio": [
+        "Dragonair",
+        "Gabite",
+        "Fraxure",
+        "Shelgon",
+        "Vibrava",
+        "Zweilous"
+      ],
+      "team_finale": [
+        "Gyarados",
+        "Aerodactyl",
+        "Charizard",
+        "Kingdra",
+        "Salamence",
+        "Dragonite"
+      ]
+    }
+  ],
+  "Hoenn": [
+    {
+      "nome": "Roxanne",
+      "ruolo": "Capopalestra",
+      "tipo": "Roccia",
+      "team_base": [
+        "Geodude",
+        "Onix",
+        "Roggenrola",
+        "Rhyhorn",
+        "Nosepass",
+        "Larvitar"
+      ],
+      "team_intermedio": [
+        "Graveler",
+        "Boldore",
+        "Rhydon",
+        "Pupitar",
+        "Lairon",
+        "Corsola"
+      ],
+      "team_finale": [
+        "Tyranitar",
+        "Steelix",
+        "Rhyperior",
+        "Lycanroc",
+        "Garganacl",
+        "Aerodactyl"
+      ]
+    },
+    {
+      "nome": "Brawly",
+      "ruolo": "Capopalestra",
+      "tipo": "Lotta",
+      "team_base": [
+        "Mankey",
+        "Riolu",
+        "Meditite",
+        "Timburr",
+        "Croagunk",
+        "Makuhita"
+      ],
+      "team_intermedio": [
+        "Primeape",
+        "Lucario",
+        "Medicham",
+        "Gurdurr",
+        "Toxicroak",
+        "Hariyama"
+      ],
+      "team_finale": [
+        "Annihilape",
+        "Lucario",
+        "Gallade",
+        "Blaziken",
+        "Kommo-o",
+        "Conkeldurr"
+      ]
+    },
+    {
+      "nome": "Wattson",
+      "ruolo": "Capopalestra",
+      "tipo": "Elettro",
+      "team_base": [
+        "Voltorb",
+        "Shinx",
+        "Mareep",
+        "Elekid",
+        "Blitzle",
+        "Tynamo"
+      ],
+      "team_intermedio": [
+        "Electrode",
+        "Luxio",
+        "Flaaffy",
+        "Electabuzz",
+        "Zebstrika",
+        "Eelektrik"
+      ],
+      "team_finale": [
+        "Magnezone",
+        "Rotom",
+        "Ampharos",
+        "Zeraora",
+        "Bellibolt",
+        "Toxtricity"
+      ]
+    },
+    {
+      "nome": "Flannery",
+      "ruolo": "Capopalestra",
+      "tipo": "Fuoco",
+      "team_base": [
+        "Litwick",
+        "Numel",
+        "Ponyta",
+        "Fletchling",
+        "Slugma",
+        "Torchic"
+      ],
+      "team_intermedio": [
+        "Lampent",
+        "Camerupt",
+        "Rapidash",
+        "Fletchinder",
+        "Magmar",
+        "Combusken"
+      ],
+      "team_finale": [
+        "Ceruledge",
+        "Blaziken",
+        "Arcanine",
+        "Skeledirge",
+        "Infernape",
+        "Talonflame"
+      ]
+    },
+    {
+      "nome": "Norman",
+      "ruolo": "Capopalestra",
+      "tipo": "Normale",
+      "team_base": [
+        "Lillipup",
+        "Munchlax",
+        "Sentret",
+        "Skwovet",
+        "Starly",
+        "Zigzagoon"
+      ],
+      "team_intermedio": [
+        "Herdier",
+        "Porygon2",
+        "Dubwool",
+        "Bibarel",
+        "Staravia",
+        "Linoone"
+      ],
+      "team_finale": [
+        "Staraptor",
+        "Maushold",
+        "Zangoose",
+        "Indeedee",
+        "Slaking",
+        "Braviary"
+      ]
+    },
+    {
+      "nome": "Winona",
+      "ruolo": "Capopalestra",
+      "tipo": "Volante",
+      "team_base": [
+        "Fletchling",
+        "Wingull",
+        "Noibat",
+        "Rookidee",
+        "Doduo",
+        "Murkrow"
+      ],
+      "team_intermedio": [
+        "Fearow",
+        "Golbat",
+        "Pelipper",
+        "Corvisquire",
+        "Noivern",
+        "Honchkrow"
+      ],
+      "team_finale": [
+        "Skarmory",
+        "Salamence",
+        "Gliscor",
+        "Noivern",
+        "Pelipper",
+        "Kilowattrel"
+      ]
+    },
+    {
+      "nome": "Tate & Liza",
+      "ruolo": "Capopalestra",
+      "tipo": "Psico",
+      "team_base": [
+        "Natu",
+        "Spoink",
+        "Meditite",
+        "Bronzor",
+        "Hatenna",
+        "Indeedee"
+      ],
+      "team_intermedio": [
+        "Xatu",
+        "Grumpig",
+        "Medicham",
+        "Bronzong",
+        "Hattrem",
+        "Mr. Mime"
+      ],
+      "team_finale": [
+        "Slowking",
+        "Indeedee",
+        "Reuniclus",
+        "Gothitelle",
+        "Medicham",
+        "Bronzong"
+      ]
+    },
+    {
+      "nome": "Wallace",
+      "ruolo": "Capopalestra",
+      "tipo": "Acqua",
+      "team_base": [
+        "Wingull",
+        "Mudkip",
+        "Froakie",
+        "Popplio",
+        "Quaxly",
+        "Psyduck"
+      ],
+      "team_intermedio": [
+        "Pelipper",
+        "Marshtomp",
+        "Frogadier",
+        "Brionne",
+        "Quaxwell",
+        "Golduck"
+      ],
+      "team_finale": [
+        "Palafin",
+        "Kingdra",
+        "Azumarill",
+        "Primarina",
+        "Dondozo",
+        "Gyarados"
+      ]
+    },
+    {
+      "nome": "Sidney",
+      "ruolo": "Superquattro",
+      "tipo": "Buio",
+      "team_base": [
+        "Pawniard",
+        "Impidimp",
+        "Sneasel",
+        "Maschiff",
+        "Poochyena",
+        "Houndour"
+      ],
+      "team_intermedio": [
+        "Bisharp",
+        "Morgrem",
+        "Sneasel",
+        "Mabosstiff",
+        "Mightyena",
+        "Houndoom"
+      ],
+      "team_finale": [
+        "Grimmsnarl",
+        "Honchkrow",
+        "Houndoom",
+        "Mabosstiff",
+        "Hydreigon",
+        "Tyranitar"
+      ]
+    },
+    {
+      "nome": "Phoebe",
+      "ruolo": "Superquattro",
+      "tipo": "Spettro",
+      "team_base": [
+        "Golett",
+        "Sinistea",
+        "Yamask",
+        "Gastly",
+        "Shuppet",
+        "Duskull"
+      ],
+      "team_intermedio": [
+        "Golurk",
+        "Polteageist",
+        "Runerigus",
+        "Haunter",
+        "Dusclops",
+        "Banette"
+      ],
+      "team_finale": [
+        "Golurk",
+        "Decidueye",
+        "Ceruledge",
+        "Gengar",
+        "Aegislash",
+        "Dragapult"
+      ]
+    },
+    {
+      "nome": "Glacia",
+      "ruolo": "Superquattro",
+      "tipo": "Ghiaccio",
+      "team_base": [
+        "Amaura",
+        "Frigibax",
+        "Swinub",
+        "Snorunt",
+        "Spheal",
+        "Cubchoo"
+      ],
+      "team_intermedio": [
+        "Abomasnow",
+        "Bergmite",
+        "Piloswine",
+        "Glalie",
+        "Sealeo",
+        "Beartic"
+      ],
+      "team_finale": [
+        "Frosmoth",
+        "Cloyster",
+        "Mamoswine",
+        "Weavile",
+        "Froslass",
+        "Baxcalibur"
+      ]
+    },
+    {
+      "nome": "Drake",
+      "ruolo": "Superquattro",
+      "tipo": "Drago",
+      "team_base": [
+        "Applin",
+        "Dratini",
+        "Gible",
+        "Axew",
+        "Bagon",
+        "Trapinch"
+      ],
+      "team_intermedio": [
+        "Dipplin",
+        "Dragonair",
+        "Gabite",
+        "Fraxure",
+        "Shelgon",
+        "Vibrava"
+      ],
+      "team_finale": [
+        "Kingdra",
+        "Dragonite",
+        "Salamence",
+        "Garchomp",
+        "Hydreigon",
+        "Dragapult"
+      ]
+    },
+    {
+      "nome": "Steven",
+      "ruolo": "Campione",
+      "tipo": "Acciaio",
+      "team_base": [
+        "Magnemite",
+        "Aron",
+        "Beldum",
+        "Pawniard",
+        "Tinkatink",
+        "Ferroseed"
+      ],
+      "team_intermedio": [
+        "Magneton",
+        "Lairon",
+        "Metang",
+        "Bisharp",
+        "Tinkatuff",
+        "Klang"
+      ],
+      "team_finale": [
+        "Skarmory",
+        "Claydol",
+        "Aggron",
+        "Cradily",
+        "Armaldo",
+        "Metagross"
+      ]
+    }
+  ],
+  "Sinnoh": [
+    {
+      "nome": "Roark",
+      "ruolo": "Capopalestra",
+      "tipo": "Roccia",
+      "team_base": [
+        "Geodude",
+        "Onix",
+        "Roggenrola",
+        "Rhyhorn",
+        "Nosepass",
+        "Larvitar"
+      ],
+      "team_intermedio": [
+        "Graveler",
+        "Boldore",
+        "Rhydon",
+        "Pupitar",
+        "Lairon",
+        "Corsola"
+      ],
+      "team_finale": [
+        "Tyranitar",
+        "Steelix",
+        "Rhyperior",
+        "Lycanroc",
+        "Garganacl",
+        "Aerodactyl"
+      ]
+    },
+    {
+      "nome": "Gardenia",
+      "ruolo": "Capopalestra",
+      "tipo": "Erba",
+      "team_base": [
+        "Bellsprout",
+        "Budew",
+        "Petilil",
+        "Foongus",
+        "Sewaddle",
+        "Hoppip"
+      ],
+      "team_intermedio": [
+        "Weepinbell",
+        "Roselia",
+        "Lilligant",
+        "Amoonguss",
+        "Swadloon",
+        "Skiploom"
+      ],
+      "team_finale": [
+        "Roserade",
+        "Breloom",
+        "Ferrothorn",
+        "Meowscarada",
+        "Leafeon",
+        "Tsareena"
+      ]
+    },
+    {
+      "nome": "Maylene",
+      "ruolo": "Capopalestra",
+      "tipo": "Lotta",
+      "team_base": [
+        "Riolu",
+        "Meditite",
+        "Timburr",
+        "Croagunk",
+        "Makuhita",
+        "Tyrogue"
+      ],
+      "team_intermedio": [
+        "Lucario",
+        "Medicham",
+        "Gurdurr",
+        "Toxicroak",
+        "Hariyama",
+        "Hitmontop"
+      ],
+      "team_finale": [
+        "Lucario",
+        "Gallade",
+        "Blaziken",
+        "Kommo-o",
+        "Conkeldurr",
+        "Hawlucha"
+      ]
+    },
+    {
+      "nome": "Crasher Wake",
+      "ruolo": "Capopalestra",
+      "tipo": "Acqua",
+      "team_base": [
+        "Wooper",
+        "Shellder",
+        "Finneon",
+        "Buizel",
+        "Wingull",
+        "Mudkip"
+      ],
+      "team_intermedio": [
+        "Quagsire",
+        "Dewgong",
+        "Lanturn",
+        "Floatzel",
+        "Pelipper",
+        "Marshtomp"
+      ],
+      "team_finale": [
+        "Lapras",
+        "Swampert",
+        "Starmie",
+        "Empoleon",
+        "Palafin",
+        "Kingdra"
+      ]
+    },
+    {
+      "nome": "Fantina",
+      "ruolo": "Capopalestra",
+      "tipo": "Spettro",
+      "team_base": [
+        "Greavard",
+        "Frillish",
+        "Litwick",
+        "Phantump",
+        "Dreepy",
+        "Golett"
+      ],
+      "team_intermedio": [
+        "Lampent",
+        "Drifblim",
+        "Gourgeist",
+        "Cursola",
+        "Drakloak",
+        "Golurk"
+      ],
+      "team_finale": [
+        "Chandelure",
+        "Annihilape",
+        "Skeledirge",
+        "Flutter Mane",
+        "Dusknoir",
+        "Golurk"
+      ]
+    },
+    {
+      "nome": "Byron",
+      "ruolo": "Capopalestra",
+      "tipo": "Acciaio",
+      "team_base": [
+        "Ferroseed",
+        "Bronzor",
+        "Varoom",
+        "Klink",
+        "Honedge",
+        "Rookidee"
+      ],
+      "team_intermedio": [
+        "Klang",
+        "Bronzong",
+        "Revavroom",
+        "Doublade",
+        "Corvisquire",
+        "Ferrothorn"
+      ],
+      "team_finale": [
+        "Lucario",
+        "Scizor",
+        "Aegislash",
+        "Aggron",
+        "Revavroom",
+        "Ferrothorn"
+      ]
+    },
+    {
+      "nome": "Candice",
+      "ruolo": "Capopalestra",
+      "tipo": "Ghiaccio",
+      "team_base": [
+        "Cetoddle",
+        "Delibird",
+        "Sneasel",
+        "Vanillite",
+        "Amaura",
+        "Frigibax"
+      ],
+      "team_intermedio": [
+        "Vanillish",
+        "Sneasel",
+        "Arctibax",
+        "Aurorus",
+        "Abomasnow",
+        "Bergmite"
+      ],
+      "team_finale": [
+        "Glaceon",
+        "Walrein",
+        "Aurorus",
+        "Abomasnow",
+        "Frosmoth",
+        "Cloyster"
+      ]
+    },
+    {
+      "nome": "Volkner",
+      "ruolo": "Capopalestra",
+      "tipo": "Elettro",
+      "team_base": [
+        "Tynamo",
+        "Joltik",
+        "Yamper",
+        "Pawmi",
+        "Toxel",
+        "Pikachu"
+      ],
+      "team_intermedio": [
+        "Eelektrik",
+        "Galvantula",
+        "Boltund",
+        "Pawmo",
+        "Toxtricity",
+        "Raichu"
+      ],
+      "team_finale": [
+        "Toxtricity",
+        "Vikavolt",
+        "Jolteon",
+        "Kilowattrel",
+        "Eelektross",
+        "Electivire"
+      ]
+    },
+    {
+      "nome": "Aaron",
+      "ruolo": "Superquattro",
+      "tipo": "Coleottero",
+      "team_base": [
+        "Nymble",
+        "Wimpod",
+        "Dewpider",
+        "Blipbug",
+        "Caterpie",
+        "Weedle"
+      ],
+      "team_intermedio": [
+        "Golisopod",
+        "Araquanid",
+        "Vivillon",
+        "Spewpa",
+        "Metapod",
+        "Kakuna"
+      ],
+      "team_finale": [
+        "Golisopod",
+        "Araquanid",
+        "Yanmega",
+        "Leavanny",
+        "Scizor",
+        "Volcarona"
+      ]
+    },
+    {
+      "nome": "Bertha",
+      "ruolo": "Superquattro",
+      "tipo": "Terra",
+      "team_base": [
+        "Numel",
+        "Barboach",
+        "Paldean Wooper",
+        "Sandshrew",
+        "Diglett",
+        "Phanpy"
+      ],
+      "team_intermedio": [
+        "Whiscash",
+        "Clodsire",
+        "Nidorino",
+        "Sandslash",
+        "Dugtrio",
+        "Donphan"
+      ],
+      "team_finale": [
+        "Swampert",
+        "Gastrodon",
+        "Mudsdale",
+        "Garchomp",
+        "Excadrill",
+        "Krookodile"
+      ]
+    },
+    {
+      "nome": "Flint",
+      "ruolo": "Superquattro",
+      "tipo": "Fuoco",
+      "team_base": [
+        "Fuecoco",
+        "Charcadet",
+        "Vulpix",
+        "Growlithe",
+        "Houndour",
+        "Litwick"
+      ],
+      "team_intermedio": [
+        "Crocalor",
+        "Charmeleon",
+        "Ninetales",
+        "Arcanine",
+        "Houndoom",
+        "Lampent"
+      ],
+      "team_finale": [
+        "Cinderace",
+        "Typhlosion",
+        "Charizard",
+        "Volcarona",
+        "Chandelure",
+        "Ceruledge"
+      ]
+    },
+    {
+      "nome": "Lucian",
+      "ruolo": "Superquattro",
+      "tipo": "Psico",
+      "team_base": [
+        "Indeedee",
+        "Abra",
+        "Drowzee",
+        "Ralts",
+        "Gothita",
+        "Solosis"
+      ],
+      "team_intermedio": [
+        "Mr. Mime",
+        "Kadabra",
+        "Hypno",
+        "Kirlia",
+        "Gothorita",
+        "Duosion"
+      ],
+      "team_finale": [
+        "Bronzong",
+        "Alakazam",
+        "Gardevoir",
+        "Metagross",
+        "Gallade",
+        "Hatterene"
+      ]
+    },
+    {
+      "nome": "Cynthia",
+      "ruolo": "Campione",
+      "tipo": "Misto",
+      "team_base": [
+        "Eevee",
+        "Riolu",
+        "Larvitar",
+        "Dratini",
+        "Ralts",
+        "Gastly"
+      ],
+      "team_intermedio": [
+        "Lucario",
+        "Dragonair",
+        "Pupitar",
+        "Kirlia",
+        "Haunter",
+        "Gabite"
+      ],
+      "team_finale": [
+        "Spiritomb",
+        "Roserade",
+        "Togekiss",
+        "Milotic",
+        "Lucario",
+        "Garchomp"
+      ]
+    }
+  ],
+  "Unima": [
+    {
+      "nome": "Cilan",
+      "ruolo": "Capopalestra",
+      "tipo": "Erba",
+      "team_base": [
+        "Oddish",
+        "Bellsprout",
+        "Budew",
+        "Petilil",
+        "Foongus",
+        "Sewaddle"
+      ],
+      "team_intermedio": [
+        "Gloom",
+        "Weepinbell",
+        "Roselia",
+        "Lilligant",
+        "Amoonguss",
+        "Swadloon"
+      ],
+      "team_finale": [
+        "Venusaur",
+        "Roserade",
+        "Breloom",
+        "Ferrothorn",
+        "Meowscarada",
+        "Leafeon"
+      ]
+    },
+    {
+      "nome": "Chili",
+      "ruolo": "Capopalestra",
+      "tipo": "Fuoco",
+      "team_base": [
+        "Growlithe",
+        "Houndour",
+        "Litwick",
+        "Numel",
+        "Ponyta",
+        "Fletchling"
+      ],
+      "team_intermedio": [
+        "Arcanine",
+        "Houndoom",
+        "Lampent",
+        "Camerupt",
+        "Rapidash",
+        "Fletchinder"
+      ],
+      "team_finale": [
+        "Volcarona",
+        "Chandelure",
+        "Ceruledge",
+        "Blaziken",
+        "Arcanine",
+        "Skeledirge"
+      ]
+    },
+    {
+      "nome": "Cress",
+      "ruolo": "Capopalestra",
+      "tipo": "Acqua",
+      "team_base": [
+        "Horsea",
+        "Wooper",
+        "Shellder",
+        "Finneon",
+        "Buizel",
+        "Wingull"
+      ],
+      "team_intermedio": [
+        "Seadra",
+        "Quagsire",
+        "Dewgong",
+        "Lanturn",
+        "Floatzel",
+        "Pelipper"
+      ],
+      "team_finale": [
+        "Greninja",
+        "Lapras",
+        "Swampert",
+        "Starmie",
+        "Empoleon",
+        "Palafin"
+      ]
+    },
+    {
+      "nome": "Lenora",
+      "ruolo": "Capopalestra",
+      "tipo": "Normale",
+      "team_base": [
+        "Buneary",
+        "Lillipup",
+        "Munchlax",
+        "Sentret",
+        "Skwovet",
+        "Starly"
+      ],
+      "team_intermedio": [
+        "Lopunny",
+        "Herdier",
+        "Porygon2",
+        "Dubwool",
+        "Bibarel",
+        "Staravia"
+      ],
+      "team_finale": [
+        "Blissey",
+        "Staraptor",
+        "Maushold",
+        "Zangoose",
+        "Indeedee",
+        "Slaking"
+      ]
+    },
+    {
+      "nome": "Burgh",
+      "ruolo": "Capopalestra",
+      "tipo": "Coleottero",
+      "team_base": [
+        "Sewaddle",
+        "Grubbin",
+        "Scatterbug",
+        "Tarountula",
+        "Nymble",
+        "Wimpod"
+      ],
+      "team_intermedio": [
+        "Charjabug",
+        "Dottler",
+        "Swadloon",
+        "Nymble",
+        "Golisopod",
+        "Araquanid"
+      ],
+      "team_finale": [
+        "Lokix",
+        "Galvantula",
+        "Kleavor",
+        "Pinsir",
+        "Golisopod",
+        "Araquanid"
+      ]
+    },
+    {
+      "nome": "Elesa",
+      "ruolo": "Capopalestra",
+      "tipo": "Elettro",
+      "team_base": [
+        "Elekid",
+        "Blitzle",
+        "Tynamo",
+        "Joltik",
+        "Yamper",
+        "Pawmi"
+      ],
+      "team_intermedio": [
+        "Electabuzz",
+        "Zebstrika",
+        "Eelektrik",
+        "Galvantula",
+        "Boltund",
+        "Pawmo"
+      ],
+      "team_finale": [
+        "Zeraora",
+        "Bellibolt",
+        "Toxtricity",
+        "Vikavolt",
+        "Jolteon",
+        "Kilowattrel"
+      ]
+    },
+    {
+      "nome": "Clay",
+      "ruolo": "Capopalestra",
+      "tipo": "Terra",
+      "team_base": [
+        "Mudbray",
+        "Gible",
+        "Sandile",
+        "Numel",
+        "Barboach",
+        "Paldean Wooper"
+      ],
+      "team_intermedio": [
+        "Gabite",
+        "Krokorok",
+        "Camerupt",
+        "Whiscash",
+        "Clodsire",
+        "Nidorino"
+      ],
+      "team_finale": [
+        "Clodsire",
+        "Flygon",
+        "Donphan",
+        "Swampert",
+        "Gastrodon",
+        "Mudsdale"
+      ]
+    },
+    {
+      "nome": "Skyla",
+      "ruolo": "Capopalestra",
+      "tipo": "Volante",
+      "team_base": [
+        "Noibat",
+        "Rookidee",
+        "Doduo",
+        "Murkrow",
+        "Wattrel",
+        "Pidgey"
+      ],
+      "team_intermedio": [
+        "Pelipper",
+        "Corvisquire",
+        "Noivern",
+        "Honchkrow",
+        "Kilowattrel",
+        "Pidgeotto"
+      ],
+      "team_finale": [
+        "Gliscor",
+        "Noivern",
+        "Pelipper",
+        "Kilowattrel",
+        "Crobat",
+        "Corviknight"
+      ]
+    },
+    {
+      "nome": "Brycen",
+      "ruolo": "Capopalestra",
+      "tipo": "Ghiaccio",
+      "team_base": [
+        "Sneasel",
+        "Vanillite",
+        "Amaura",
+        "Frigibax",
+        "Swinub",
+        "Snorunt"
+      ],
+      "team_intermedio": [
+        "Arctibax",
+        "Aurorus",
+        "Abomasnow",
+        "Bergmite",
+        "Piloswine",
+        "Glalie"
+      ],
+      "team_finale": [
+        "Aurorus",
+        "Abomasnow",
+        "Frosmoth",
+        "Cloyster",
+        "Mamoswine",
+        "Weavile"
+      ]
+    },
+    {
+      "nome": "Drayden",
+      "ruolo": "Capopalestra",
+      "tipo": "Drago",
+      "team_base": [
+        "Frigibax",
+        "Goomy",
+        "Applin",
+        "Dratini",
+        "Gible",
+        "Axew"
+      ],
+      "team_intermedio": [
+        "Arctibax",
+        "Sliggoo",
+        "Dipplin",
+        "Dragonair",
+        "Gabite",
+        "Fraxure"
+      ],
+      "team_finale": [
+        "Flygon",
+        "Noivern",
+        "Kingdra",
+        "Dragonite",
+        "Salamence",
+        "Garchomp"
+      ]
+    },
+    {
+      "nome": "Shauntal",
+      "ruolo": "Superquattro",
+      "tipo": "Spettro",
+      "team_base": [
+        "Sinistea",
+        "Yamask",
+        "Gastly",
+        "Shuppet",
+        "Duskull",
+        "Misdreavus"
+      ],
+      "team_intermedio": [
+        "Polteageist",
+        "Runerigus",
+        "Haunter",
+        "Dusclops",
+        "Banette",
+        "Mismagius"
+      ],
+      "team_finale": [
+        "Decidueye",
+        "Ceruledge",
+        "Gengar",
+        "Aegislash",
+        "Dragapult",
+        "Mimikyu"
+      ]
+    },
+    {
+      "nome": "Grimsley",
+      "ruolo": "Superquattro",
+      "tipo": "Buio",
+      "team_base": [
+        "Maschiff",
+        "Poochyena",
+        "Houndour",
+        "Murkrow",
+        "Purrloin",
+        "Nickit"
+      ],
+      "team_intermedio": [
+        "Mabosstiff",
+        "Mightyena",
+        "Houndoom",
+        "Honchkrow",
+        "Liepard",
+        "Zweilous"
+      ],
+      "team_finale": [
+        "Mabosstiff",
+        "Hydreigon",
+        "Tyranitar",
+        "Kingambit",
+        "Weavile",
+        "Umbreon"
+      ]
+    },
+    {
+      "nome": "Caitlin",
+      "ruolo": "Superquattro",
+      "tipo": "Psico",
+      "team_base": [
+        "Abra",
+        "Drowzee",
+        "Ralts",
+        "Gothita",
+        "Solosis",
+        "Espurr"
+      ],
+      "team_intermedio": [
+        "Kadabra",
+        "Hypno",
+        "Kirlia",
+        "Gothorita",
+        "Duosion",
+        "Meowstic"
+      ],
+      "team_finale": [
+        "Alakazam",
+        "Gardevoir",
+        "Metagross",
+        "Gallade",
+        "Hatterene",
+        "Espeon"
+      ]
+    },
+    {
+      "nome": "Marshal",
+      "ruolo": "Superquattro",
+      "tipo": "Lotta",
+      "team_base": [
+        "Mankey",
+        "Riolu",
+        "Meditite",
+        "Timburr",
+        "Croagunk",
+        "Makuhita"
+      ],
+      "team_intermedio": [
+        "Primeape",
+        "Lucario",
+        "Medicham",
+        "Gurdurr",
+        "Toxicroak",
+        "Hariyama"
+      ],
+      "team_finale": [
+        "Annihilape",
+        "Lucario",
+        "Gallade",
+        "Blaziken",
+        "Kommo-o",
+        "Conkeldurr"
+      ]
+    },
+    {
+      "nome": "Alder",
+      "ruolo": "Campione",
+      "tipo": "Misto",
+      "team_base": [
+        "Larvitar",
+        "Dratini",
+        "Ralts",
+        "Gastly",
+        "Pawniard",
+        "Gible"
+      ],
+      "team_intermedio": [
+        "Pupitar",
+        "Kirlia",
+        "Haunter",
+        "Gabite",
+        "Charmeleon",
+        "Metang"
+      ],
+      "team_finale": [
+        "Accelgor",
+        "Bouffalant",
+        "Druddigon",
+        "Escavalier",
+        "Vanilluxe",
+        "Volcarona"
+      ]
+    }
+  ],
+  "Kalos": [
+    {
+      "nome": "Viola",
+      "ruolo": "Capopalestra",
+      "tipo": "Coleottero",
+      "team_base": [
+        "Caterpie",
+        "Weedle",
+        "Spinarak",
+        "Venipede",
+        "Sewaddle",
+        "Grubbin"
+      ],
+      "team_intermedio": [
+        "Metapod",
+        "Kakuna",
+        "Ariados",
+        "Whirlipede",
+        "Charjabug",
+        "Dottler"
+      ],
+      "team_finale": [
+        "Scizor",
+        "Volcarona",
+        "Heracross",
+        "Vikavolt",
+        "Lokix",
+        "Galvantula"
+      ]
+    },
+    {
+      "nome": "Grant",
+      "ruolo": "Capopalestra",
+      "tipo": "Roccia",
+      "team_base": [
+        "Onix",
+        "Roggenrola",
+        "Rhyhorn",
+        "Nosepass",
+        "Larvitar",
+        "Dwebble"
+      ],
+      "team_intermedio": [
+        "Boldore",
+        "Rhydon",
+        "Pupitar",
+        "Lairon",
+        "Corsola",
+        "Onix"
+      ],
+      "team_finale": [
+        "Steelix",
+        "Rhyperior",
+        "Lycanroc",
+        "Garganacl",
+        "Aerodactyl",
+        "Aggron"
+      ]
+    },
+    {
+      "nome": "Korrina",
+      "ruolo": "Capopalestra",
+      "tipo": "Lotta",
+      "team_base": [
+        "Riolu",
+        "Meditite",
+        "Timburr",
+        "Croagunk",
+        "Makuhita",
+        "Tyrogue"
+      ],
+      "team_intermedio": [
+        "Lucario",
+        "Medicham",
+        "Gurdurr",
+        "Toxicroak",
+        "Hariyama",
+        "Hitmontop"
+      ],
+      "team_finale": [
+        "Lucario",
+        "Gallade",
+        "Blaziken",
+        "Kommo-o",
+        "Conkeldurr",
+        "Hawlucha"
+      ]
+    },
+    {
+      "nome": "Ramos",
+      "ruolo": "Capopalestra",
+      "tipo": "Erba",
+      "team_base": [
+        "Petilil",
+        "Foongus",
+        "Sewaddle",
+        "Hoppip",
+        "Capsakid",
+        "Sprigatito"
+      ],
+      "team_intermedio": [
+        "Lilligant",
+        "Amoonguss",
+        "Swadloon",
+        "Skiploom",
+        "Floragato",
+        "Bayleef"
+      ],
+      "team_finale": [
+        "Ferrothorn",
+        "Meowscarada",
+        "Leafeon",
+        "Tsareena",
+        "Torterra",
+        "Victreebel"
+      ]
+    },
+    {
+      "nome": "Clemont",
+      "ruolo": "Capopalestra",
+      "tipo": "Elettro",
+      "team_base": [
+        "Mareep",
+        "Elekid",
+        "Blitzle",
+        "Tynamo",
+        "Joltik",
+        "Yamper"
+      ],
+      "team_intermedio": [
+        "Flaaffy",
+        "Electabuzz",
+        "Zebstrika",
+        "Eelektrik",
+        "Galvantula",
+        "Boltund"
+      ],
+      "team_finale": [
+        "Ampharos",
+        "Zeraora",
+        "Bellibolt",
+        "Toxtricity",
+        "Vikavolt",
+        "Jolteon"
+      ]
+    },
+    {
+      "nome": "Valerie",
+      "ruolo": "Capopalestra",
+      "tipo": "Folletto",
+      "team_base": [
+        "Tinkatink",
+        "Impidimp",
+        "Spritzee",
+        "Milcery",
+        "Azurill",
+        "Mimikyu"
+      ],
+      "team_intermedio": [
+        "Morgrem",
+        "Tinkatuff",
+        "Mawile",
+        "Alcremie",
+        "Azumarill",
+        "Hattrem"
+      ],
+      "team_finale": [
+        "Hatterene",
+        "Azumarill",
+        "Grimmsnarl",
+        "Florges",
+        "Alcremie",
+        "Ribombee"
+      ]
+    },
+    {
+      "nome": "Olympia",
+      "ruolo": "Capopalestra",
+      "tipo": "Psico",
+      "team_base": [
+        "Natu",
+        "Spoink",
+        "Meditite",
+        "Bronzor",
+        "Hatenna",
+        "Indeedee"
+      ],
+      "team_intermedio": [
+        "Xatu",
+        "Grumpig",
+        "Medicham",
+        "Bronzong",
+        "Hattrem",
+        "Mr. Mime"
+      ],
+      "team_finale": [
+        "Slowking",
+        "Indeedee",
+        "Reuniclus",
+        "Gothitelle",
+        "Medicham",
+        "Bronzong"
+      ]
+    },
+    {
+      "nome": "Wulfric",
+      "ruolo": "Capopalestra",
+      "tipo": "Ghiaccio",
+      "team_base": [
+        "Delibird",
+        "Sneasel",
+        "Vanillite",
+        "Amaura",
+        "Frigibax",
+        "Swinub"
+      ],
+      "team_intermedio": [
+        "Sneasel",
+        "Arctibax",
+        "Aurorus",
+        "Abomasnow",
+        "Bergmite",
+        "Piloswine"
+      ],
+      "team_finale": [
+        "Walrein",
+        "Aurorus",
+        "Abomasnow",
+        "Frosmoth",
+        "Cloyster",
+        "Mamoswine"
+      ]
+    },
+    {
+      "nome": "Malva",
+      "ruolo": "Superquattro",
+      "tipo": "Fuoco",
+      "team_base": [
+        "Torchic",
+        "Chimchar",
+        "Fuecoco",
+        "Charcadet",
+        "Vulpix",
+        "Growlithe"
+      ],
+      "team_intermedio": [
+        "Combusken",
+        "Monferno",
+        "Crocalor",
+        "Charmeleon",
+        "Ninetales",
+        "Arcanine"
+      ],
+      "team_finale": [
+        "Talonflame",
+        "Houndoom",
+        "Cinderace",
+        "Typhlosion",
+        "Charizard",
+        "Volcarona"
+      ]
+    },
+    {
+      "nome": "Siebold",
+      "ruolo": "Superquattro",
+      "tipo": "Acqua",
+      "team_base": [
+        "Froakie",
+        "Popplio",
+        "Quaxly",
+        "Psyduck",
+        "Poliwag",
+        "Horsea"
+      ],
+      "team_intermedio": [
+        "Frogadier",
+        "Brionne",
+        "Quaxwell",
+        "Golduck",
+        "Poliwhirl",
+        "Seadra"
+      ],
+      "team_finale": [
+        "Azumarill",
+        "Primarina",
+        "Dondozo",
+        "Gyarados",
+        "Milotic",
+        "Greninja"
+      ]
+    },
+    {
+      "nome": "Wikstrom",
+      "ruolo": "Superquattro",
+      "tipo": "Acciaio",
+      "team_base": [
+        "Rookidee",
+        "Meltan",
+        "Magnemite",
+        "Aron",
+        "Beldum",
+        "Pawniard"
+      ],
+      "team_intermedio": [
+        "Ferrothorn",
+        "Lucario",
+        "Magneton",
+        "Lairon",
+        "Metang",
+        "Bisharp"
+      ],
+      "team_finale": [
+        "Ferrothorn",
+        "Empoleon",
+        "Metagross",
+        "Corviknight",
+        "Kingambit",
+        "Tinkaton"
+      ]
+    },
+    {
+      "nome": "Drasna",
+      "ruolo": "Superquattro",
+      "tipo": "Drago",
+      "team_base": [
+        "Applin",
+        "Dratini",
+        "Gible",
+        "Axew",
+        "Bagon",
+        "Trapinch"
+      ],
+      "team_intermedio": [
+        "Dipplin",
+        "Dragonair",
+        "Gabite",
+        "Fraxure",
+        "Shelgon",
+        "Vibrava"
+      ],
+      "team_finale": [
+        "Kingdra",
+        "Dragonite",
+        "Salamence",
+        "Garchomp",
+        "Hydreigon",
+        "Dragapult"
+      ]
+    },
+    {
+      "nome": "Diantha",
+      "ruolo": "Campione",
+      "tipo": "Misto",
+      "team_base": [
+        "Eevee",
+        "Riolu",
+        "Larvitar",
+        "Dratini",
+        "Ralts",
+        "Gastly"
+      ],
+      "team_intermedio": [
+        "Lucario",
+        "Dragonair",
+        "Pupitar",
+        "Kirlia",
+        "Haunter",
+        "Gabite"
+      ],
+      "team_finale": [
+        "Hawlucha",
+        "Tyrantrum",
+        "Aurorus",
+        "Gourgeist",
+        "Goodra",
+        "Gardevoir"
+      ]
+    }
+  ],
+  "Alola": [
+    {
+      "nome": "Hala",
+      "ruolo": "Superquattro",
+      "tipo": "Lotta",
+      "team_base": [
+        "Machop",
+        "Mankey",
+        "Riolu",
+        "Meditite",
+        "Timburr",
+        "Croagunk"
+      ],
+      "team_intermedio": [
+        "Machoke",
+        "Primeape",
+        "Lucario",
+        "Medicham",
+        "Gurdurr",
+        "Toxicroak"
+      ],
+      "team_finale": [
+        "Machamp",
+        "Annihilape",
+        "Lucario",
+        "Gallade",
+        "Blaziken",
+        "Kommo-o"
+      ]
+    },
+    {
+      "nome": "Olivia",
+      "ruolo": "Superquattro",
+      "tipo": "Roccia",
+      "team_base": [
+        "Onix",
+        "Roggenrola",
+        "Rhyhorn",
+        "Nosepass",
+        "Larvitar",
+        "Dwebble"
+      ],
+      "team_intermedio": [
+        "Boldore",
+        "Rhydon",
+        "Pupitar",
+        "Lairon",
+        "Corsola",
+        "Onix"
+      ],
+      "team_finale": [
+        "Steelix",
+        "Rhyperior",
+        "Lycanroc",
+        "Garganacl",
+        "Aerodactyl",
+        "Aggron"
+      ]
+    },
+    {
+      "nome": "Acerola",
+      "ruolo": "Superquattro",
+      "tipo": "Spettro",
+      "team_base": [
+        "Duskull",
+        "Misdreavus",
+        "Greavard",
+        "Frillish",
+        "Litwick",
+        "Phantump"
+      ],
+      "team_intermedio": [
+        "Banette",
+        "Mismagius",
+        "Lampent",
+        "Drifblim",
+        "Gourgeist",
+        "Cursola"
+      ],
+      "team_finale": [
+        "Dragapult",
+        "Mimikyu",
+        "Chandelure",
+        "Annihilape",
+        "Skeledirge",
+        "Flutter Mane"
+      ]
+    },
+    {
+      "nome": "Kahili",
+      "ruolo": "Superquattro",
+      "tipo": "Volante",
+      "team_base": [
+        "Starly",
+        "Rufflet",
+        "Fletchling",
+        "Wingull",
+        "Noibat",
+        "Rookidee"
+      ],
+      "team_intermedio": [
+        "Swellow",
+        "Tranquill",
+        "Fearow",
+        "Golbat",
+        "Pelipper",
+        "Corvisquire"
+      ],
+      "team_finale": [
+        "Dragonite",
+        "Togekiss",
+        "Skarmory",
+        "Salamence",
+        "Gliscor",
+        "Noivern"
+      ]
+    },
+    {
+      "nome": "Molayne",
+      "ruolo": "Superquattro",
+      "tipo": "Acciaio",
+      "team_base": [
+        "Tinkatink",
+        "Ferroseed",
+        "Bronzor",
+        "Varoom",
+        "Klink",
+        "Honedge"
+      ],
+      "team_intermedio": [
+        "Tinkatuff",
+        "Klang",
+        "Bronzong",
+        "Revavroom",
+        "Doublade",
+        "Corvisquire"
+      ],
+      "team_finale": [
+        "Magnezone",
+        "Lucario",
+        "Scizor",
+        "Aegislash",
+        "Aggron",
+        "Revavroom"
+      ]
+    },
+    {
+      "nome": "Nanu",
+      "ruolo": "Kahuna",
+      "tipo": "Buio",
+      "team_base": [
+        "Deino",
+        "Zorua",
+        "Sandile",
+        "Pawniard",
+        "Impidimp",
+        "Sneasel"
+      ],
+      "team_intermedio": [
+        "Krookorok",
+        "Absol",
+        "Umbreon",
+        "Bisharp",
+        "Morgrem",
+        "Sneasel"
+      ],
+      "team_finale": [
+        "Krookodile",
+        "Darkrai",
+        "Meowscarada",
+        "Grimmsnarl",
+        "Honchkrow",
+        "Houndoom"
+      ]
+    },
+    {
+      "nome": "Hapu",
+      "ruolo": "Kahuna",
+      "tipo": "Terra",
+      "team_base": [
+        "Mudbray",
+        "Gible",
+        "Sandile",
+        "Numel",
+        "Barboach",
+        "Paldean Wooper"
+      ],
+      "team_intermedio": [
+        "Gabite",
+        "Krokorok",
+        "Camerupt",
+        "Whiscash",
+        "Clodsire",
+        "Nidorino"
+      ],
+      "team_finale": [
+        "Clodsire",
+        "Flygon",
+        "Donphan",
+        "Swampert",
+        "Gastrodon",
+        "Mudsdale"
+      ]
+    },
+    {
+      "nome": "Lana",
+      "ruolo": "Capitano",
+      "tipo": "Acqua",
+      "team_base": [
+        "Wingull",
+        "Mudkip",
+        "Froakie",
+        "Popplio",
+        "Quaxly",
+        "Psyduck"
+      ],
+      "team_intermedio": [
+        "Pelipper",
+        "Marshtomp",
+        "Frogadier",
+        "Brionne",
+        "Quaxwell",
+        "Golduck"
+      ],
+      "team_finale": [
+        "Palafin",
+        "Kingdra",
+        "Azumarill",
+        "Primarina",
+        "Dondozo",
+        "Gyarados"
+      ]
+    },
+    {
+      "nome": "Kiawe",
+      "ruolo": "Capitano",
+      "tipo": "Fuoco",
+      "team_base": [
+        "Torchic",
+        "Chimchar",
+        "Fuecoco",
+        "Charcadet",
+        "Vulpix",
+        "Growlithe"
+      ],
+      "team_intermedio": [
+        "Combusken",
+        "Monferno",
+        "Crocalor",
+        "Charmeleon",
+        "Ninetales",
+        "Arcanine"
+      ],
+      "team_finale": [
+        "Talonflame",
+        "Houndoom",
+        "Cinderace",
+        "Typhlosion",
+        "Charizard",
+        "Volcarona"
+      ]
+    },
+    {
+      "nome": "Mallow",
+      "ruolo": "Capitano",
+      "tipo": "Erba",
+      "team_base": [
+        "Chikorita",
+        "Seedot",
+        "Bounsweet",
+        "Oddish",
+        "Bellsprout",
+        "Budew"
+      ],
+      "team_intermedio": [
+        "Nuzleaf",
+        "Steenee",
+        "Dolliv",
+        "Gloom",
+        "Weepinbell",
+        "Roselia"
+      ],
+      "team_finale": [
+        "Vileplume",
+        "Scovillain",
+        "Toedscruel",
+        "Venusaur",
+        "Roserade",
+        "Breloom"
+      ]
+    },
+    {
+      "nome": "Sophocles",
+      "ruolo": "Capitano",
+      "tipo": "Elettro",
+      "team_base": [
+        "Pawmi",
+        "Toxel",
+        "Pikachu",
+        "Magnemite",
+        "Voltorb",
+        "Shinx"
+      ],
+      "team_intermedio": [
+        "Pawmo",
+        "Toxtricity",
+        "Raichu",
+        "Magneton",
+        "Electrode",
+        "Luxio"
+      ],
+      "team_finale": [
+        "Kilowattrel",
+        "Eelektross",
+        "Electivire",
+        "Luxray",
+        "Magnezone",
+        "Rotom"
+      ]
+    },
+    {
+      "nome": "Mina",
+      "ruolo": "Capitano",
+      "tipo": "Folletto",
+      "team_base": [
+        "Hatenna",
+        "Cleffa",
+        "Togepi",
+        "Snubbull",
+        "Ralts",
+        "Flabebe"
+      ],
+      "team_intermedio": [
+        "Ribombee",
+        "Clefairy",
+        "Togetic",
+        "Granbull",
+        "Kirlia",
+        "Floette"
+      ],
+      "team_finale": [
+        "Clefable",
+        "Gardevoir",
+        "Togekiss",
+        "Sylveon",
+        "Tinkaton",
+        "Mimikyu"
+      ]
+    },
+    {
+      "nome": "Kukui",
+      "ruolo": "Campione",
+      "tipo": "Misto",
+      "team_base": [
+        "Eevee",
+        "Riolu",
+        "Larvitar",
+        "Dratini",
+        "Ralts",
+        "Gastly"
+      ],
+      "team_intermedio": [
+        "Lucario",
+        "Dragonair",
+        "Pupitar",
+        "Kirlia",
+        "Haunter",
+        "Gabite"
+      ],
+      "team_finale": [
+        "Lycanroc",
+        "Braviary",
+        "Snorlax",
+        "Magnezone",
+        "Ninetales",
+        "Decidueye"
+      ]
+    }
+  ],
+  "Galar": [
+    {
+      "nome": "Milo",
+      "ruolo": "Capopalestra",
+      "tipo": "Erba",
+      "team_base": [
+        "Oddish",
+        "Bellsprout",
+        "Budew",
+        "Petilil",
+        "Foongus",
+        "Sewaddle"
+      ],
+      "team_intermedio": [
+        "Gloom",
+        "Weepinbell",
+        "Roselia",
+        "Lilligant",
+        "Amoonguss",
+        "Swadloon"
+      ],
+      "team_finale": [
+        "Venusaur",
+        "Roserade",
+        "Breloom",
+        "Ferrothorn",
+        "Meowscarada",
+        "Leafeon"
+      ]
+    },
+    {
+      "nome": "Nessa",
+      "ruolo": "Capopalestra",
+      "tipo": "Acqua",
+      "team_base": [
+        "Poliwag",
+        "Horsea",
+        "Wooper",
+        "Shellder",
+        "Finneon",
+        "Buizel"
+      ],
+      "team_intermedio": [
+        "Poliwhirl",
+        "Seadra",
+        "Quagsire",
+        "Dewgong",
+        "Lanturn",
+        "Floatzel"
+      ],
+      "team_finale": [
+        "Milotic",
+        "Greninja",
+        "Lapras",
+        "Swampert",
+        "Starmie",
+        "Empoleon"
+      ]
+    },
+    {
+      "nome": "Kabu",
+      "ruolo": "Capopalestra",
+      "tipo": "Fuoco",
+      "team_base": [
+        "Houndour",
+        "Litwick",
+        "Numel",
+        "Ponyta",
+        "Fletchling",
+        "Slugma"
+      ],
+      "team_intermedio": [
+        "Houndoom",
+        "Lampent",
+        "Camerupt",
+        "Rapidash",
+        "Fletchinder",
+        "Magmar"
+      ],
+      "team_finale": [
+        "Chandelure",
+        "Ceruledge",
+        "Blaziken",
+        "Arcanine",
+        "Skeledirge",
+        "Infernape"
+      ]
+    },
+    {
+      "nome": "Bea",
+      "ruolo": "Capopalestra",
+      "tipo": "Lotta",
+      "team_base": [
+        "Meditite",
+        "Timburr",
+        "Croagunk",
+        "Makuhita",
+        "Tyrogue",
+        "Mienfoo"
+      ],
+      "team_intermedio": [
+        "Medicham",
+        "Gurdurr",
+        "Toxicroak",
+        "Hariyama",
+        "Hitmontop",
+        "Mienshao"
+      ],
+      "team_finale": [
+        "Gallade",
+        "Blaziken",
+        "Kommo-o",
+        "Conkeldurr",
+        "Hawlucha",
+        "Mienshao"
+      ]
+    },
+    {
+      "nome": "Allister",
+      "ruolo": "Capopalestra",
+      "tipo": "Spettro",
+      "team_base": [
+        "Greavard",
+        "Frillish",
+        "Litwick",
+        "Phantump",
+        "Dreepy",
+        "Golett"
+      ],
+      "team_intermedio": [
+        "Lampent",
+        "Drifblim",
+        "Gourgeist",
+        "Cursola",
+        "Drakloak",
+        "Golurk"
+      ],
+      "team_finale": [
+        "Chandelure",
+        "Annihilape",
+        "Skeledirge",
+        "Flutter Mane",
+        "Dusknoir",
+        "Golurk"
+      ]
+    },
+    {
+      "nome": "Opal",
+      "ruolo": "Capopalestra",
+      "tipo": "Folletto",
+      "team_base": [
+        "Tinkatink",
+        "Impidimp",
+        "Spritzee",
+        "Milcery",
+        "Azurill",
+        "Mimikyu"
+      ],
+      "team_intermedio": [
+        "Morgrem",
+        "Tinkatuff",
+        "Mawile",
+        "Alcremie",
+        "Azumarill",
+        "Hattrem"
+      ],
+      "team_finale": [
+        "Hatterene",
+        "Azumarill",
+        "Grimmsnarl",
+        "Florges",
+        "Alcremie",
+        "Ribombee"
+      ]
+    },
+    {
+      "nome": "Gordie",
+      "ruolo": "Capopalestra",
+      "tipo": "Roccia",
+      "team_base": [
+        "Dwebble",
+        "Aron",
+        "Rockruff",
+        "Cranidos",
+        "Shieldon",
+        "Binacle"
+      ],
+      "team_intermedio": [
+        "Onix",
+        "Gligar",
+        "Dwebble",
+        "Lycanroc",
+        "Rampardos",
+        "Bastiodon"
+      ],
+      "team_finale": [
+        "Aggron",
+        "Tyrantrum",
+        "Cradily",
+        "Armaldo",
+        "Kleavor",
+        "Coalossal"
+      ]
+    },
+    {
+      "nome": "Melony",
+      "ruolo": "Capopalestra",
+      "tipo": "Ghiaccio",
+      "team_base": [
+        "Delibird",
+        "Sneasel",
+        "Vanillite",
+        "Amaura",
+        "Frigibax",
+        "Swinub"
+      ],
+      "team_intermedio": [
+        "Sneasel",
+        "Arctibax",
+        "Aurorus",
+        "Abomasnow",
+        "Bergmite",
+        "Piloswine"
+      ],
+      "team_finale": [
+        "Walrein",
+        "Aurorus",
+        "Abomasnow",
+        "Frosmoth",
+        "Cloyster",
+        "Mamoswine"
+      ]
+    },
+    {
+      "nome": "Piers",
+      "ruolo": "Capopalestra",
+      "tipo": "Buio",
+      "team_base": [
+        "Pawniard",
+        "Impidimp",
+        "Sneasel",
+        "Maschiff",
+        "Poochyena",
+        "Houndour"
+      ],
+      "team_intermedio": [
+        "Bisharp",
+        "Morgrem",
+        "Sneasel",
+        "Mabosstiff",
+        "Mightyena",
+        "Houndoom"
+      ],
+      "team_finale": [
+        "Grimmsnarl",
+        "Honchkrow",
+        "Houndoom",
+        "Mabosstiff",
+        "Hydreigon",
+        "Tyranitar"
+      ]
+    },
+    {
+      "nome": "Raihan",
+      "ruolo": "Capopalestra",
+      "tipo": "Drago",
+      "team_base": [
+        "Frigibax",
+        "Goomy",
+        "Applin",
+        "Dratini",
+        "Gible",
+        "Axew"
+      ],
+      "team_intermedio": [
+        "Arctibax",
+        "Sliggoo",
+        "Dipplin",
+        "Dragonair",
+        "Gabite",
+        "Fraxure"
+      ],
+      "team_finale": [
+        "Flygon",
+        "Noivern",
+        "Kingdra",
+        "Dragonite",
+        "Salamence",
+        "Garchomp"
+      ]
+    },
+    {
+      "nome": "Marnie",
+      "ruolo": "Rivale/Capopalestra",
+      "tipo": "Buio",
+      "team_base": [
+        "Sneasel",
+        "Maschiff",
+        "Poochyena",
+        "Houndour",
+        "Murkrow",
+        "Purrloin"
+      ],
+      "team_intermedio": [
+        "Sneasel",
+        "Mabosstiff",
+        "Mightyena",
+        "Houndoom",
+        "Honchkrow",
+        "Liepard"
+      ],
+      "team_finale": [
+        "Houndoom",
+        "Mabosstiff",
+        "Hydreigon",
+        "Tyranitar",
+        "Kingambit",
+        "Weavile"
+      ]
+    },
+    {
+      "nome": "Hop",
+      "ruolo": "Rivale",
+      "tipo": "Misto",
+      "team_base": [
+        "Dreepy",
+        "Eevee",
+        "Riolu",
+        "Larvitar",
+        "Dratini",
+        "Ralts"
+      ],
+      "team_intermedio": [
+        "Porygon2",
+        "Lucario",
+        "Dragonair",
+        "Pupitar",
+        "Kirlia",
+        "Haunter"
+      ],
+      "team_finale": [
+        "Kingambit",
+        "Metagross",
+        "Garchomp",
+        "Lucario",
+        "Dragonite",
+        "Charizard"
+      ]
+    },
+    {
+      "nome": "Leon",
+      "ruolo": "Campione",
+      "tipo": "Misto",
+      "team_base": [
+        "Eevee",
+        "Riolu",
+        "Larvitar",
+        "Dratini",
+        "Ralts",
+        "Gastly"
+      ],
+      "team_intermedio": [
+        "Lucario",
+        "Dragonair",
+        "Pupitar",
+        "Kirlia",
+        "Haunter",
+        "Gabite"
+      ],
+      "team_finale": [
+        "Aegislash",
+        "Dragapult",
+        "Haxorus",
+        "Rillaboom",
+        "Cinderace",
+        "Charizard"
+      ]
+    }
+  ],
+  "Paldea": [
+    {
+      "nome": "Katy",
+      "ruolo": "Capopalestra",
+      "tipo": "Coleottero",
+      "team_base": [
+        "Caterpie",
+        "Weedle",
+        "Spinarak",
+        "Venipede",
+        "Sewaddle",
+        "Grubbin"
+      ],
+      "team_intermedio": [
+        "Metapod",
+        "Kakuna",
+        "Ariados",
+        "Whirlipede",
+        "Charjabug",
+        "Dottler"
+      ],
+      "team_finale": [
+        "Scizor",
+        "Volcarona",
+        "Heracross",
+        "Vikavolt",
+        "Lokix",
+        "Galvantula"
+      ]
+    },
+    {
+      "nome": "Brassius",
+      "ruolo": "Capopalestra",
+      "tipo": "Erba",
+      "team_base": [
+        "Bellsprout",
+        "Budew",
+        "Petilil",
+        "Foongus",
+        "Sewaddle",
+        "Hoppip"
+      ],
+      "team_intermedio": [
+        "Weepinbell",
+        "Roselia",
+        "Lilligant",
+        "Amoonguss",
+        "Swadloon",
+        "Skiploom"
+      ],
+      "team_finale": [
+        "Roserade",
+        "Breloom",
+        "Ferrothorn",
+        "Meowscarada",
+        "Leafeon",
+        "Tsareena"
+      ]
+    },
+    {
+      "nome": "Iono",
+      "ruolo": "Capopalestra",
+      "tipo": "Elettro",
+      "team_base": [
+        "Voltorb",
+        "Shinx",
+        "Mareep",
+        "Elekid",
+        "Blitzle",
+        "Tynamo"
+      ],
+      "team_intermedio": [
+        "Electrode",
+        "Luxio",
+        "Flaaffy",
+        "Electabuzz",
+        "Zebstrika",
+        "Eelektrik"
+      ],
+      "team_finale": [
+        "Magnezone",
+        "Rotom",
+        "Ampharos",
+        "Zeraora",
+        "Bellibolt",
+        "Toxtricity"
+      ]
+    },
+    {
+      "nome": "Kofu",
+      "ruolo": "Capopalestra",
+      "tipo": "Acqua",
+      "team_base": [
+        "Wooper",
+        "Shellder",
+        "Finneon",
+        "Buizel",
+        "Wingull",
+        "Mudkip"
+      ],
+      "team_intermedio": [
+        "Quagsire",
+        "Dewgong",
+        "Lanturn",
+        "Floatzel",
+        "Pelipper",
+        "Marshtomp"
+      ],
+      "team_finale": [
+        "Lapras",
+        "Swampert",
+        "Starmie",
+        "Empoleon",
+        "Palafin",
+        "Kingdra"
+      ]
+    },
+    {
+      "nome": "Larry",
+      "ruolo": "Capopalestra",
+      "tipo": "Normale",
+      "team_base": [
+        "Lillipup",
+        "Munchlax",
+        "Sentret",
+        "Skwovet",
+        "Starly",
+        "Zigzagoon"
+      ],
+      "team_intermedio": [
+        "Herdier",
+        "Porygon2",
+        "Dubwool",
+        "Bibarel",
+        "Staravia",
+        "Linoone"
+      ],
+      "team_finale": [
+        "Staraptor",
+        "Maushold",
+        "Zangoose",
+        "Indeedee",
+        "Slaking",
+        "Braviary"
+      ]
+    },
+    {
+      "nome": "Ryme",
+      "ruolo": "Capopalestra",
+      "tipo": "Spettro",
+      "team_base": [
+        "Frillish",
+        "Litwick",
+        "Phantump",
+        "Dreepy",
+        "Golett",
+        "Sinistea"
+      ],
+      "team_intermedio": [
+        "Drifblim",
+        "Gourgeist",
+        "Cursola",
+        "Drakloak",
+        "Golurk",
+        "Polteageist"
+      ],
+      "team_finale": [
+        "Annihilape",
+        "Skeledirge",
+        "Flutter Mane",
+        "Dusknoir",
+        "Golurk",
+        "Decidueye"
+      ]
+    },
+    {
+      "nome": "Tulip",
+      "ruolo": "Capopalestra",
+      "tipo": "Psico",
+      "team_base": [
+        "Natu",
+        "Spoink",
+        "Meditite",
+        "Bronzor",
+        "Hatenna",
+        "Indeedee"
+      ],
+      "team_intermedio": [
+        "Xatu",
+        "Grumpig",
+        "Medicham",
+        "Bronzong",
+        "Hattrem",
+        "Mr. Mime"
+      ],
+      "team_finale": [
+        "Slowking",
+        "Indeedee",
+        "Reuniclus",
+        "Gothitelle",
+        "Medicham",
+        "Bronzong"
+      ]
+    },
+    {
+      "nome": "Grusha",
+      "ruolo": "Capopalestra",
+      "tipo": "Ghiaccio",
+      "team_base": [
+        "Delibird",
+        "Sneasel",
+        "Vanillite",
+        "Amaura",
+        "Frigibax",
+        "Swinub"
+      ],
+      "team_intermedio": [
+        "Sneasel",
+        "Arctibax",
+        "Aurorus",
+        "Abomasnow",
+        "Bergmite",
+        "Piloswine"
+      ],
+      "team_finale": [
+        "Walrein",
+        "Aurorus",
+        "Abomasnow",
+        "Frosmoth",
+        "Cloyster",
+        "Mamoswine"
+      ]
+    },
+    {
+      "nome": "Rika",
+      "ruolo": "Superquattro",
+      "tipo": "Terra",
+      "team_base": [
+        "Sandile",
+        "Numel",
+        "Barboach",
+        "Paldean Wooper",
+        "Sandshrew",
+        "Diglett"
+      ],
+      "team_intermedio": [
+        "Camerupt",
+        "Whiscash",
+        "Clodsire",
+        "Nidorino",
+        "Sandslash",
+        "Dugtrio"
+      ],
+      "team_finale": [
+        "Donphan",
+        "Swampert",
+        "Gastrodon",
+        "Mudsdale",
+        "Garchomp",
+        "Excadrill"
+      ]
+    },
+    {
+      "nome": "Poppy",
+      "ruolo": "Superquattro",
+      "tipo": "Acciaio",
+      "team_base": [
+        "Honedge",
+        "Rookidee",
+        "Meltan",
+        "Magnemite",
+        "Aron",
+        "Beldum"
+      ],
+      "team_intermedio": [
+        "Corvisquire",
+        "Ferrothorn",
+        "Lucario",
+        "Magneton",
+        "Lairon",
+        "Metang"
+      ],
+      "team_finale": [
+        "Revavroom",
+        "Ferrothorn",
+        "Empoleon",
+        "Metagross",
+        "Corviknight",
+        "Kingambit"
+      ]
+    },
+    {
+      "nome": "Larry E4",
+      "ruolo": "Superquattro",
+      "tipo": "Volante",
+      "team_base": [
+        "Murkrow",
+        "Wattrel",
+        "Pidgey",
+        "Hoothoot",
+        "Taillow",
+        "Starly"
+      ],
+      "team_intermedio": [
+        "Honchkrow",
+        "Kilowattrel",
+        "Pidgeotto",
+        "Noctowl",
+        "Staravia",
+        "Swellow"
+      ],
+      "team_finale": [
+        "Kilowattrel",
+        "Crobat",
+        "Corviknight",
+        "Talonflame",
+        "Staraptor",
+        "Dragonite"
+      ]
+    },
+    {
+      "nome": "Hassel",
+      "ruolo": "Superquattro",
+      "tipo": "Drago",
+      "team_base": [
+        "Applin",
+        "Dratini",
+        "Gible",
+        "Axew",
+        "Bagon",
+        "Trapinch"
+      ],
+      "team_intermedio": [
+        "Dipplin",
+        "Dragonair",
+        "Gabite",
+        "Fraxure",
+        "Shelgon",
+        "Vibrava"
+      ],
+      "team_finale": [
+        "Kingdra",
+        "Dragonite",
+        "Salamence",
+        "Garchomp",
+        "Hydreigon",
+        "Dragapult"
+      ]
+    },
+    {
+      "nome": "Geeta",
+      "ruolo": "Campione",
+      "tipo": "Misto",
+      "team_base": [
+        "Eevee",
+        "Riolu",
+        "Larvitar",
+        "Dratini",
+        "Ralts",
+        "Gastly"
+      ],
+      "team_intermedio": [
+        "Lucario",
+        "Dragonair",
+        "Pupitar",
+        "Kirlia",
+        "Haunter",
+        "Gabite"
+      ],
+      "team_finale": [
+        "Espathra",
+        "Gogoat",
+        "Veluza",
+        "Kingambit",
+        "Avalugg",
+        "Glimmora"
+      ]
+    },
+    {
+      "nome": "Nemona",
+      "ruolo": "Campione/Rivale",
+      "tipo": "Misto",
+      "team_base": [
+        "Riolu",
+        "Larvitar",
+        "Dratini",
+        "Ralts",
+        "Gastly",
+        "Pawniard"
+      ],
+      "team_intermedio": [
+        "Dragonair",
+        "Pupitar",
+        "Kirlia",
+        "Haunter",
+        "Gabite",
+        "Charmeleon"
+      ],
+      "team_finale": [
+        "Lycanroc",
+        "Goodra",
+        "Dudunsparce",
+        "Pawmot",
+        "Orthworm",
+        "Meowscarada"
+      ]
+    }
+  ],
+  "Isole_Orange": [
+    {
+      "nome": "Cissy",
+      "ruolo": "Capopalestra",
+      "tipo": "Acqua",
+      "team_base": [
+        "Squirtle",
+        "Poliwag",
+        "Horsea",
+        "Wooper",
+        "Carvanha",
+        "Chinchou"
+      ],
+      "team_intermedio": [
+        "Wartortle",
+        "Seadra",
+        "Poliwhirl",
+        "Corsola",
+        "Sharpedo",
+        "Relicanth"
+      ],
+      "team_finale": [
+        "Kingdra",
+        "Blastoise",
+        "Lanturn",
+        "Gyarados",
+        "Politoed",
+        "Vaporeon"
+      ]
+    },
+    {
+      "nome": "Danny",
+      "ruolo": "Capopalestra",
+      "tipo": "Misto",
+      "team_base": [
+        "Nidoran♀",
+        "Machop",
+        "Scyther",
+        "Voltorb",
+        "Geodude",
+        "Sandshrew_Alola"
+      ],
+      "team_intermedio": [
+        "Nidorina",
+        "Machoke",
+        "Scizor",
+        "Voltorb",
+        "Graveler",
+        "Sandslash_Alola"
+      ],
+      "team_finale": [
+        "Nidoqueen",
+        "Machamp",
+        "Kleavor",
+        "Electrode",
+        "Golem",
+        "Scizor"
+      ]
+    },
+    {
+      "nome": "Rudy",
+      "ruolo": "Capopalestra",
+      "tipo": "Misto",
+      "team_base": [
+        "Elekid",
+        "Pidgey",
+        "Venonat",
+        "Abra",
+        "Tyroguer",
+        "Vulpix"
+      ],
+      "team_intermedio": [
+        "Electabuzz",
+        "Exeggutor",
+        "Starmie",
+        "Hitmonchan",
+        "Rhydon",
+        "Venomoth"
+      ],
+      "team_finale": [
+        "Electivire",
+        "Rhyperior",
+        "Ninetales",
+        "Pidgeot",
+        "Golem",
+        "Alakazam"
+      ]
+    },
+    {
+      "nome": "Luana",
+      "ruolo": "Capopalestra",
+      "tipo": "Misto",
+      "team_base": [
+        "Pichu",
+        "Cubone",
+        "Abra",
+        "Gimmighoul",
+        "Sandile",
+        "Pinsir"
+      ],
+      "team_intermedio": [
+        "Pikachu",
+        "Marowak",
+        "Kadabra",
+        "Gholdengo",
+        "Krokorok",
+        "Heracross"
+      ],
+      "team_finale": [
+        "Raichu_Alola",
+        "Marowak",
+        "Alakazam",
+        "Gholdengo",
+        "Krookodile",
+        "Salamence"
+      ]
+    },
+    {
+      "nome": "Drake",
+      "ruolo": "Leader",
+      "tipo": "Normale",
+      "team_base": [
+        "Dratini",
+        "Onix",
+        "Gastly",
+        "Bulbasaur",
+        "Elekid",
+        "Rhyhorn"
+      ],
+      "team_intermedio": [
+        "Dragonair",
+        "Steelix",
+        "Haunter",
+        "Ivysaur",
+        "Electabuzz",
+        "Rhydon"
+      ],
+      "team_finale": [
+        "Dragonite",
+        "Steelix",
+        "Gengar",
+        "Venusaur",
+        "Electivire",
+        "Rhyperior"
+      ]
+    }
+  ],
+  "Speciali": [
+    {
+      "nome": "Bill",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Cleffa",
+        "Eevee",
+        "Cleffa",
+        "Eevee",
+        "Cleffa",
+        "Eevee"
+      ],
+      "team_intermedio": [
+        "Clefairy",
+        "Vaporeon",
+        "Jolteon",
+        "Flareon",
+        "Umbreon",
+        "Espeon"
+      ],
+      "team_finale": [
+        "Sylveon",
+        "Leafeon",
+        "Glaceon",
+        "Umbreon",
+        "Clefable",
+        "Mew"
+      ]
+    },
+    {
+      "nome": "Deku",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Frillish",
+        "Litwick",
+        "Phantump",
+        "Dreepy",
+        "Golett",
+        "Sinistea"
+      ],
+      "team_intermedio": [
+        "Drifblim",
+        "Gourgeist",
+        "Cursola",
+        "Drakloak",
+        "Golurk",
+        "Polteageist"
+      ],
+      "team_finale": [
+        "Annihilape",
+        "Skeledirge",
+        "Drifblim",
+        "Dusknoir",
+        "Golurk",
+        "Decidueye"
+      ]
+    },
+    {
+      "nome": "Nova Kanto",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Charmander",
+        "Abra",
+        "Gastly",
+        "Dratini",
+        "Eevee",
+        "Magnemite"
+      ],
+      "team_intermedio": [
+        "Charmeleon",
+        "Kadabra",
+        "Haunter",
+        "Dragonair",
+        "Vaporeon",
+        "Magneton"
+      ],
+      "team_finale": [
+        "Charizard",
+        "Alakazam",
+        "Gengar",
+        "Dragonite",
+        "Vaporeon",
+        "Magnezone"
+      ]
+    },
+    {
+      "nome": "Nova Johto",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Cyndaquil",
+        "Mareep",
+        "Murkrow",
+        "Larvitar",
+        "Sneasel",
+        "Wooper"
+      ],
+      "team_intermedio": [
+        "Quilava",
+        "Flaaffy",
+        "Honchkrow",
+        "Pupitar",
+        "Weavile",
+        "Quagsire"
+      ],
+      "team_finale": [
+        "Typhlosion",
+        "Ampharos",
+        "Tyranitar",
+        "Weavile",
+        "Kingdra",
+        "Scizor"
+      ]
+    },
+    {
+      "nome": "Nova Hoenn",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Mudkip",
+        "Ralts",
+        "Bagon",
+        "Shuppet",
+        "Aron",
+        "Trapinch"
+      ],
+      "team_intermedio": [
+        "Marshtomp",
+        "Kirlia",
+        "Shelgon",
+        "Banette",
+        "Lairon",
+        "Vibrava"
+      ],
+      "team_finale": [
+        "Swampert",
+        "Gardevoir",
+        "Salamence",
+        "Metagross",
+        "Flygon",
+        "Banette"
+      ]
+    },
+    {
+      "nome": "Nova Sinnoh",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Chimchar",
+        "Riolu",
+        "Gible",
+        "Shinx",
+        "Snorunt",
+        "Rotom"
+      ],
+      "team_intermedio": [
+        "Monferno",
+        "Lucario",
+        "Gabite",
+        "Luxio",
+        "Glalie",
+        "Rotom"
+      ],
+      "team_finale": [
+        "Infernape",
+        "Lucario",
+        "Garchomp",
+        "Luxray",
+        "Froslass",
+        "Rotom-Wash"
+      ]
+    },
+    {
+      "nome": "Nova Unova",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Oshawott",
+        "Zorua",
+        "Axew",
+        "Litwick",
+        "Joltik",
+        "Deino"
+      ],
+      "team_intermedio": [
+        "Dewott",
+        "Zoroark",
+        "Fraxure",
+        "Lampent",
+        "Galvantula",
+        "Zweilous"
+      ],
+      "team_finale": [
+        "Samurott",
+        "Zoroark",
+        "Haxorus",
+        "Chandelure",
+        "Galvantula",
+        "Hydreigon"
+      ]
+    },
+    {
+      "nome": "Nova Kalos",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Froakie",
+        "Honedge",
+        "Noibat",
+        "Eevee",
+        "Goomy",
+        "Espurr"
+      ],
+      "team_intermedio": [
+        "Frogadier",
+        "Doublade",
+        "Noibat",
+        "Sylveon",
+        "Sliggoo",
+        "Meowstic"
+      ],
+      "team_finale": [
+        "Greninja",
+        "Aegislash",
+        "Noivern",
+        "Sylveon",
+        "Goodra",
+        "Meowstic"
+      ]
+    },
+    {
+      "nome": "Nova Alola",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Rowlet",
+        "Rockruff",
+        "Mimikyu",
+        "Mareanie",
+        "Jangmo-o",
+        "Grubbin"
+      ],
+      "team_intermedio": [
+        "Dartrix",
+        "Lycanroc",
+        "Mimikyu",
+        "Toxapex",
+        "Hakamo-o",
+        "Charjabug"
+      ],
+      "team_finale": [
+        "Decidueye",
+        "Lycanroc Dusk",
+        "Mimikyu",
+        "Toxapex",
+        "Kommo-o",
+        "Vikavolt"
+      ]
+    },
+    {
+      "nome": "Nova Galar",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Scorbunny",
+        "Rookidee",
+        "Dreepy",
+        "Toxel",
+        "Impidimp",
+        "Snom"
+      ],
+      "team_intermedio": [
+        "Raboot",
+        "Corvisquire",
+        "Drakloak",
+        "Toxtricity",
+        "Morgrem",
+        "Frosmoth"
+      ],
+      "team_finale": [
+        "Cinderace",
+        "Corviknight",
+        "Dragapult",
+        "Toxtricity",
+        "Grimmsnarl",
+        "Frosmoth"
+      ]
+    },
+    {
+      "nome": "Nova Paldea",
+      "ruolo": "Elite",
+      "tipo": "Misto",
+      "team_base": [
+        "Fuecoco",
+        "Pawmi",
+        "Frigibax",
+        "Tinkatink",
+        "Charcadet",
+        "Greavard"
+      ],
+      "team_intermedio": [
+        "Crocalor",
+        "Pawmo",
+        "Arctibax",
+        "Tinkatuff",
+        "Ceruledge",
+        "Houndstone"
+      ],
+      "team_finale": [
+        "Skeledirge",
+        "Pawmot",
+        "Baxcalibur",
+        "Tinkaton",
+        "Ceruledge",
+        "Houndstone"
+      ]
+    }
+  ]
+}

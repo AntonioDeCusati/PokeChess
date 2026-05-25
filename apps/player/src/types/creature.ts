@@ -57,6 +57,8 @@ export interface Creature {
   canEvolve: boolean;
   /** `id` of the Creature this one evolves into (only set when canEvolve=true). */
   evolvesToId?: string;
+  rewardType1: number;
+  rewardType2: number;
   /** Animation clip data for this creature (idle / walk / attack / hurt). */
   animations: AnimationData[];
 }

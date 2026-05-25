@@ -25,15 +25,24 @@ datasource db {
 // ---------------------------------------------------------------------------
 
 enum CreatureType {
+  normal
   fire
   water
   grass
   electric
+  ice
+  fighting
   poison
-  dark
+  ground
+  flying
+  psychic
+  bug
+  rock
   ghost
   dragon
-  light
+  dark
+  steel
+  fairy
 }
 
 enum CreatureRarity {
@@ -49,6 +58,31 @@ enum AnimationType {
   walk
   attack
   hurt
+}
+
+enum ChestTier {
+  wood
+  iron
+  gold
+  diamond
+}
+
+enum TrainerRole {
+  professor
+  gym_leader
+  elite_four
+  champion
+  kahuna
+  captain
+  rival
+  leader
+  elite
+}
+
+enum TeamTier {
+  base
+  intermediate
+  final
 }
 
 // ---------------------------------------------------------------------------
@@ -74,9 +108,12 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  creatures UserCreature[]
-  teamSlots TeamSlot[]
-  config    Config?
+  creatures  UserCreature[]
+  teamSlots  TeamSlot[]
+  config     Config?
+  chests     UserChest[]
+  chestLog   ChestOpenLog[]
+  savedGames SavedGame[]
 
   @@index([email])
   @@index([username])
@@ -107,14 +144,18 @@ model Creature {
   /// ID of the Creature this one evolves into (null if canEvolve = false).
   evolveToId String?
 
-  /// Reward points earned when this piece is captured in battle.
-  captureReward Int @default(0)
+  /// Energy reward for type1 when this creature is captured.
+  rewardType1 Int @default(1)
+  /// Energy reward for type2 when this creature is captured (ignored if type2 is null).
+  rewardType2 Int @default(1)
 
   createdAt DateTime @default(now())
 
-  animations    CreatureAnimation[]
-  userCreatures UserCreature[]
-  teamSlots     TeamSlot[]
+  animations      CreatureAnimation[]
+  userCreatures   UserCreature[]
+  teamSlots       TeamSlot[]
+  chestLogs       ChestOpenLog[]
+  npcTrainerSlots NpcTrainerSlot[]
 
   evolveTo    Creature?  @relation("Evolution", fields: [evolveToId], references: [id])
   evolvedFrom Creature[] @relation("Evolution")
@@ -228,6 +269,60 @@ model Background {
   @@index([slug])
 }
 
+/// NPC trainer for singleplayer gameplay. Seeded from allenatori.json.
+model NpcTrainer {
+  id       String      @id @default(cuid())
+  slug     String      @unique
+  name     String
+  role     TrainerRole
+  region   String
+  /// Type specialty label (e.g. "Roccia", "Acqua", "Misto").
+  typeSpecialty String?
+
+  /// Relative path under assets/trainer/ for the battle sprite (e.g. "oak/sprite.png").
+  spritePath   String?
+  /// Relative path under assets/trainer/ for the portrait (e.g. "oak/portrait.png").
+  portraitPath String?
+
+  createdAt DateTime @default(now())
+
+  slots NpcTrainerSlot[]
+
+  @@index([region])
+  @@index([role])
+}
+
+/// One creature in an NPC trainer's team (6 per tier, 3 tiers per trainer = 18 max).
+model NpcTrainerSlot {
+  id         String   @id @default(cuid())
+  trainerId  String
+  tier       TeamTier
+  slotIndex  Int
+  creatureId String
+
+  trainer  NpcTrainer @relation(fields: [trainerId], references: [id], onDelete: Cascade)
+  creature Creature   @relation(fields: [creatureId], references: [id])
+
+  @@unique([trainerId, tier, slotIndex])
+  @@index([trainerId])
+}
+
+/// A saved/exported game state for resume or sharing.
+model SavedGame {
+  id     String  @id @default(cuid())
+  userId String
+  name   String?
+  /// Full BattleState JSON — positions, HP, turn, energies, etc.
+  state  Json
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
 /// Per-user "Configurazione" selection (the 3 cards on the Board screen).
 model Config {
   userId       String   @id
@@ -237,4 +332,34 @@ model Config {
   updatedAt    DateTime @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+/// Inventory of chests per user. One row per (user, tier).
+model UserChest {
+  id       String    @id @default(cuid())
+  userId   String
+  tier     ChestTier
+  quantity Int       @default(0)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, tier])
+  @@index([userId])
+}
+
+/// Log of every chest opening — used for pity counter and audit.
+model ChestOpenLog {
+  id         String       @id @default(cuid())
+  userId     String
+  tier       ChestTier
+  creatureId String
+  rarity     CreatureRarity
+  wasPity    Boolean      @default(false)
+  openedAt   DateTime     @default(now())
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  creature Creature @relation(fields: [creatureId], references: [id])
+
+  @@index([userId, tier])
+  @@index([userId])
 }

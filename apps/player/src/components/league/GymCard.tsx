@@ -7,7 +7,7 @@ export interface GymCardProps {
   onChallenge?: (gym: Gym) => void;
 }
 
-const typeTint: Record<Gym['type'], string> = {
+const typeTint: Partial<Record<string, string>> = {
   fire:     '#E85C3A',
   water:    '#4FA8E0',
   grass:    '#5BBF4A',
@@ -16,7 +16,7 @@ const typeTint: Record<Gym['type'], string> = {
   dark:     '#3E4454',
   ghost:    '#C7C7D1',
   dragon:   '#55B89C',
-  light:    '#F5D787',
+  fairy:    '#F5D787',
 };
 
 /**

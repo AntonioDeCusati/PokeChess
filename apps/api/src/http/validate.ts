@@ -22,3 +22,20 @@ export function validateBody<T>(schema: ZodSchema<T>): RequestHandler {
     next();
   };
 }
+
+export function validateParams<T>(schema: ZodSchema<T>): RequestHandler {
+  return (req, _res, next) => {
+    const result = schema.safeParse(req.params);
+    if (!result.success) {
+      next(
+        HttpError.unprocessable(
+          'Invalid request parameters',
+          result.error.flatten(),
+        ),
+      );
+      return;
+    }
+    Object.assign(req.params, result.data);
+    next();
+  };
+}

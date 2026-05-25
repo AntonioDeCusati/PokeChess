@@ -13,29 +13,12 @@ const POKEAPI_GRAPHQL = 'https://beta.pokeapi.co/graphql/v1beta';
 const MAX_POKEDEX = 1025;
 
 // Map official Pokemon types → our CreatureType enum.
-const TYPE_MAP: Record<string, CreatureType> = {
-  normal:   'light',
-  fire:     'fire',
-  water:    'water',
-  grass:    'grass',
-  electric: 'electric',
-  ice:      'water',
-  fighting: 'fire',
-  poison:   'poison',
-  ground:   'dark',
-  flying:   'light',
-  psychic:  'light',
-  bug:      'grass',
-  rock:     'dark',
-  ghost:    'ghost',
-  dragon:   'dragon',
-  dark:     'dark',
-  steel:    'electric',
-  fairy:    'light',
-};
-
 function mapType(pokemonType: string): CreatureType {
-  return TYPE_MAP[pokemonType] ?? 'light';
+  const valid: Set<string> = new Set([
+    'normal','fire','water','grass','electric','ice','fighting','poison',
+    'ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy',
+  ]);
+  return (valid.has(pokemonType) ? pokemonType : 'normal') as CreatureType;
 }
 
 function calcRarity(bst: number, isLegendary: boolean, isMythical: boolean): CreatureRarity {
